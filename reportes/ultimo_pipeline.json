@@ -1,10 +1,24 @@
 {
-  "estado": "sin_cambios",
-  "ruta": "/mnt/c/Users/EliasRodriguez/Documents/GitHub/myFiles/Masters/Automatic_Learn/Proj/datos/raw/v26/CPU_benchmark_v4.csv",
+  "estado": "ok",
+  "ruta": "/home/runner/work/cpu-perf-mlops/cpu-perf-mlops/datos/raw/v26/CPU_benchmark_v4.csv",
   "version": "26",
   "hash": "ecc4a219587e",
-  "blender_snapshot": "opendata-2026-11-18",
+  "version_techpowerup": "2",
+  "version_pc_build": "019b9db923a8",
+  "cobertura_externos": "38%",
+  "blender_snapshot": "opendata-2026-11-24",
+  "produccion_antes": 7,
+  "cruzado": {
+    "ganador": "A' + pseudo-etiquetas",
+    "mae": 2417.5194252481333,
+    "produccion_version": 7,
+    "mae_produccion": 2441.6,
+    "blender_snapshot": "opendata-2026-11-24",
+    "registrado": null
+  },
   "produccion": 7,
-  "fecha": "2026-11-24T13:42:15",
-  "cambio_produccion": false
+  "produccion_modelo": "cruzado: combo con nucleos reales + 353 CPUs de Blender traducidos a PassMark",
+  "cambio_produccion": false,
+  "duracion_seg": 114.647078,
+  "fecha": "2026-11-24T20:09:11"
 }

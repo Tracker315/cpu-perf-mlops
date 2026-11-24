@@ -11,7 +11,7 @@ turbo_ghz,Wasserstein distance (normed),1.4311743238334282,0.1,True,,,
 hilos,K-S p_value,1.459138844508859e-06,0.05,True,,,
 fabricante,Jensen-Shannon distance,0.44480951758786996,0.1,True,3.2006853835635902,fuerte,True
 familia,Jensen-Shannon distance,0.3749228847011956,0.1,True,1.5767678811326549,fuerte,True
-sufijo,Jensen-Shannon distance,0.18901539741397036,0.1,True,,,
+sufijo,Jensen-Shannon distance,0.18901539741397022,0.1,True,,,
 socket,Jensen-Shannon distance,0.6496799812786994,0.1,True,,,
 es_desktop,Jensen-Shannon distance,0.11446005658405074,0.1,True,0.10575770916892632,moderado,True
 es_laptop,Jensen-Shannon distance,0.1664909912255369,0.1,True,0.2264502137002268,moderado,True
