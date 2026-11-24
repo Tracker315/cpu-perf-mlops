@@ -35,13 +35,21 @@ EXP = "cpu-perf/transferencia"
 
 # ---------------------------------------------------------------- utilidades
 def con_extra(columnas, fn):
-    """Corre fn() con columnas extra habilitadas en el preprocesamiento."""
-    antes = list(modelos.EXTRA_NUMERICAS)
-    modelos.EXTRA_NUMERICAS[:] = columnas
+    """Corre fn() con columnas extra (pista de otro modelo, indicador de fuente) sumadas a las numericas del
+    preprocesamiento. Solo lo usa este experimento: reemplaza modelos.preprocesamiento mientras corre fn()."""
+    original = modelos.preprocesamiento
+
+    def con_columnas(polinomio=0, externos=None):
+        ct = original(polinomio, externos)
+        nombre, pasos, cols = ct.transformers[0]                  # ("num", pipeline numerico, columnas)
+        ct.transformers[0] = (nombre, pasos, list(cols) + [c for c in columnas if c not in cols])
+        return ct
+
+    modelos.preprocesamiento = con_columnas
     try:
         return fn()
     finally:
-        modelos.EXTRA_NUMERICAS[:] = antes
+        modelos.preprocesamiento = original
 
 
 def ajustar(m, X, y):

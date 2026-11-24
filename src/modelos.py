@@ -10,14 +10,16 @@ from sklearn.model_selection import KFold
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.neural_network import MLPRegressor
 from sklearn.pipeline import make_pipeline
-from sklearn.preprocessing import FunctionTransformer, OneHotEncoder, PolynomialFeatures, StandardScaler, TargetEncoder
+from sklearn.preprocessing import FunctionTransformer, OneHotEncoder, PolynomialFeatures, StandardScaler
 
 from .config import SEMILLA
 
-NUMERICAS = ["cores", "TDP", "anio", "ghz_nombre", "generacion", "gama"]
-CATEGORICAS = ["fabricante", "familia", "sufijo"]
-ALTA_CARDINALIDAD = ["socket"]       # 200+ valores: target encoding en vez de one-hot
-BANDERAS = ["es_desktop", "es_laptop", "es_server", "es_mobile"]
+# Columnas que entran al modelo, agrupadas por como se preparan (ver preprocesamiento)
+NUMERICAS = ["cores", "TDP", "anio", "ghz_nombre", "generacion", "gama"]   # cores y TDP primero: log_cores_tdp usa su posicion
+EXTERNAS = ["l3_mb", "proceso_nm", "base_ghz", "turbo_ghz", "hilos"]        # TechPowerUp / pc_build: se suman a las numericas
+CATEGORICAS = ["fabricante", "familia", "sufijo"]                          # one-hot
+ALTA_CARDINALIDAD = ["socket"]       # 200+ valores: one-hot agrupando los raros (en E3 gano a target encoding: 807 vs 827)
+BANDERAS = ["es_desktop", "es_laptop", "es_server", "es_mobile"]          # ya son 0/1: pasan tal cual
 
 
 def log_cores_tdp(X):
@@ -26,10 +28,6 @@ def log_cores_tdp(X):
     X[:, 0] = np.log1p(X[:, 0])
     X[:, 1] = np.log1p(X[:, 1])
     return X
-
-
-EXTERNAS = ["l3_mb", "proceso_nm", "base_ghz", "turbo_ghz", "hilos"]
-EXTRA_NUMERICAS = []     # transfer learning: columnas extra (pista de otro modelo, indicador de fuente); vacio = normal
 
 
 def usar_externos(si=True):
@@ -43,7 +41,6 @@ def preprocesamiento(polinomio=0, externos=None):
     """externos=None usa lo que diga usar_externos(); True/False lo fija (necesario en procesos paralelos, donde el
     valor global no se hereda)."""
     numericas = NUMERICAS if externos is None else [c for c in NUMERICAS if c not in EXTERNAS] + (EXTERNAS if externos else [])
-    numericas = list(numericas) + [c for c in EXTRA_NUMERICAS if c not in numericas]
     pasos_num = [SimpleImputer(strategy="median", add_indicator=True),   # el indicador avisa si TDP o ghz faltaban
                  FunctionTransformer(log_cores_tdp, feature_names_out="one-to-one")]
     if polinomio:
