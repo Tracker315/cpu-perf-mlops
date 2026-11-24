@@ -1,0 +1,99 @@
+{
+  "cobertura": {
+    "passmark": 3825,
+    "nucleos_corregidos": 137,
+    "blender_cpus": 1114,
+    "blender_con_anio": 1077,
+    "blender_con_tdp": 827,
+    "en_ambos": 724,
+    "solo_blender": 353
+  },
+  "traductor": {
+    "simple (solo log blender)": {
+      "mae": 1604.5212805937574,
+      "rmse": 3004.1994972638245,
+      "r2": 0.9382315045344186,
+      "r2_log": 0.949017190613498,
+      "mape": 0.14496802166355519,
+      "kpi_dentro_20pct": 0.7720994475138122
+    },
+    "con nucleos, hilos, tipo, marca": {
+      "mae": 1486.2254652824709,
+      "rmse": 3357.4528456989037,
+      "r2": 0.9228511727649211,
+      "r2_log": 0.9526100024090681,
+      "mape": 0.13453994013400403,
+      "kpi_dentro_20pct": 0.81353591160221
+    }
+  },
+  "modelo_b": {
+    "combo": {
+      "mape": 0.23527615442104785,
+      "kpi": 0.6118941260668204
+    },
+    "hibrido_bosque": {
+      "mape": 0.24790398000555136,
+      "kpi": 0.6124527446634137
+    },
+    "hibrido_hgb": {
+      "mape": 0.2142179981802282,
+      "kpi": 0.6540416409991455
+    },
+    "random_forest": {
+      "mape": 0.2142851315670203,
+      "kpi": 0.5662222045585518
+    }
+  },
+  "cortes": {
+    "A (actual)": {
+      "mae": 2764.726350221733,
+      "kpi": 0.4619776897288325
+    },
+    "A' (nucleos reales)": {
+      "mae": 2459.438873855624,
+      "kpi": 0.4991344192379469
+    },
+    "C(B)": {
+      "mae": 6509.639479747075,
+      "kpi": 0.31972168755516917
+    },
+    "A' + pseudo-etiquetas": {
+      "mae": 2440.1208303898047,
+      "kpi": 0.4937617043052415
+    },
+    "mezcla A' + C(B) (peso A 0.9)": {
+      "mae": 2604.5367330227646,
+      "kpi": 0.5095570178566624
+    }
+  },
+  "peso_a": 0.9,
+  "futuro": {
+    "n": 323,
+    "solo contar nucleos": 0.8246946687775955,
+    "A' (nucleos reales)": 0.7713246791081697,
+    "C(B)": 0.8055920222194831,
+    "mezcla final (peso A 0.9)": 0.783403199104112
+  },
+  "traducidos": [
+    {
+      "entrena_hasta": 2023,
+      "n_test": 235,
+      "traducidos": 118,
+      "orden_nucleos": 0.835100733436187,
+      "orden_A2": 0.7905751310967617,
+      "orden_A2_traducidos": 0.8497871007568149,
+      "dentro20_A2": 0.451063829787234,
+      "dentro20_A2_traducidos": 0.574468085106383
+    },
+    {
+      "entrena_hasta": 2024,
+      "n_test": 141,
+      "traducidos": 212,
+      "orden_nucleos": 0.8575448277185129,
+      "orden_A2": 0.7427059498446394,
+      "orden_A2_traducidos": 0.8266745499308396,
+      "dentro20_A2": 0.4326241134751773,
+      "dentro20_A2_traducidos": 0.7021276595744681
+    }
+  ]
+}

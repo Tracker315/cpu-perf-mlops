@@ -1,0 +1,14 @@
+{
+  "multiScore": {
+    "log_cores": 0.897,
+    "log_turbo": 0.781,
+    "log_hilos_por_core": 0.315,
+    "r2": 0.854
+  },
+  "singleScore": {
+    "log_cores": 0.015,
+    "log_turbo": 0.951,
+    "log_hilos_por_core": -0.182,
+    "r2": 0.325
+  }
+}

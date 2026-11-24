@@ -1,0 +1,94 @@
+# Pipeline MLOps automatico en la nube: cada lunes (y a mano desde la pestana Actions).
+#   1. baja el estado de MLflow (SQLite + modelo en produccion) del repo PRIVADO de Hugging Face
+#   2. corre el pipeline: datos frescos -> calidad -> reentrena lo que tenga datos nuevos -> registro -> drift -> batch
+#   3. sube el estado de MLflow actualizado (solo lo nuevo)
+#   4. si cambio el modelo en produccion, regenera despliegue/ (la pagina de Streamlit se redespliega sola con el push)
+#   5. guarda reportes + pagina en este repo y el log como artifact de la corrida
+#
+# Configurar una vez en GitHub (Settings -> Secrets and variables -> Actions):
+#   Secrets:   HF_TOKEN (token de Hugging Face con permiso de escritura)
+#              KAGGLE_USERNAME, KAGGLE_KEY (opcionales: solo si Kaggle pide credenciales)
+#   Variables: HF_REPO_MLFLOW (ej. usuario/cpu-perf-mlflow)
+name: pipeline semanal
+
+on:
+  schedule:
+    - cron: "0 9 * * 1"          # lunes 09:00 UTC = 03:00 en la Ciudad de Mexico
+  workflow_dispatch:
+    inputs:
+      forzar:
+        description: "Reentrenar aunque no haya datos nuevos"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write                 # para guardar los reportes en el repo
+
+concurrency:
+  group: pipeline                 # nunca dos corridas a la vez (comparten el mismo mlflow.db)
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash                   # bash -eo pipefail: si un paso falla, la corrida se detiene
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      HF_TOKEN: ${{ secrets.HF_TOKEN }}
+      HF_REPO_MLFLOW: ${{ vars.HF_REPO_MLFLOW }}
+      MLFLOW_DISABLE_AGENT_HINT: "1"
+      EVIDENTLY_PYTHON: ${{ github.workspace }}/.evidently/bin/python
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt huggingface_hub
+
+      - name: Entorno aparte para Evidently (aun no soporta pandas 3)
+        run: |
+          python -m venv .evidently
+          .evidently/bin/pip install -q "evidently==0.7.23" "pandas<3" pyarrow
+
+      - name: Bajar estado de MLflow (Hugging Face, privado)
+        run: python -m src.nube bajar
+
+      - name: Pipeline
+        env:
+          KAGGLE_USERNAME_SECRET: ${{ secrets.KAGGLE_USERNAME }}
+          KAGGLE_KEY_SECRET: ${{ secrets.KAGGLE_KEY }}
+        run: |
+          if [ -n "$KAGGLE_KEY_SECRET" ]; then
+            export KAGGLE_USERNAME="$KAGGLE_USERNAME_SECRET" KAGGLE_KEY="$KAGGLE_KEY_SECRET"
+          fi
+          date +%s > .inicio
+          python -m src.pipeline ${{ inputs.forzar && '--forzar' || '' }} 2>&1 | tee pipeline.log
+          cat reportes/ultimo_pipeline.json
+
+      - name: Subir estado de MLflow
+        run: python -m src.nube subir --desde "$(cat .inicio)"
+
+      - name: Regenerar la pagina si cambio el modelo en produccion
+        run: python -m src.nube pagina --si-cambio
+
+      - name: Guardar reportes y pagina en el repo (Streamlit se redespliega con el push)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reportes despliegue datos/batch_entrada.csv datos/batch_salida.csv
+          git diff --cached --quiet || (git commit -m "pipeline $(date +%F): reportes y pagina" && git push)
+
+      - name: Guardar el log de la corrida
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pipeline-log
+          path: pipeline.log
+          if-no-files-found: ignore

@@ -1,0 +1,19 @@
+variable,metodo_evidently,valor_evidently,umbral,drift_evidently,psi,nivel,drift_psi
+cores,Wasserstein distance (normed),1.0034878975281216,0.1,True,1.5851664806584027,fuerte,True
+TDP,Wasserstein distance (normed),0.43004845457647606,0.1,True,0.2949541890438157,fuerte,True
+ghz_nombre,Wasserstein distance (normed),0.1555490279690404,0.1,True,0.09184940433640193,estable,False
+generacion,K-S p_value,1.0685644232657799e-33,0.05,True,,,
+gama,K-S p_value,4.450333614012158e-06,0.05,True,,,
+l3_mb,K-S p_value,6.843862398138323e-42,0.05,True,,,
+proceso_nm,Wasserstein distance (normed),0.9133407672741302,0.1,True,,,
+base_ghz,Wasserstein distance (normed),0.28749958377637413,0.1,True,,,
+turbo_ghz,Wasserstein distance (normed),1.4311743238334282,0.1,True,,,
+hilos,K-S p_value,1.459138844508859e-06,0.05,True,,,
+fabricante,Jensen-Shannon distance,0.44480951758786996,0.1,True,3.2006853835635902,fuerte,True
+familia,Jensen-Shannon distance,0.3749228847011956,0.1,True,1.5767678811326549,fuerte,True
+sufijo,Jensen-Shannon distance,0.18901539741397036,0.1,True,,,
+socket,Jensen-Shannon distance,0.6496799812786994,0.1,True,,,
+es_desktop,Jensen-Shannon distance,0.11446005658405074,0.1,True,0.10575770916892632,moderado,True
+es_laptop,Jensen-Shannon distance,0.1664909912255369,0.1,True,0.2264502137002268,moderado,True
+es_server,Jensen-Shannon distance,0.08487054298375708,0.1,False,0.05810424355144152,estable,False
+es_mobile,Jensen-Shannon distance,0.41483770863522756,0.1,True,2.1073373223829304,fuerte,True

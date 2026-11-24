@@ -1,0 +1,13 @@
+# mismas versiones con las que MLflow guardo el modelo v7 (ver modelo/requirements.txt): el .pkl necesita esta scikit-learn
+scikit-learn==1.9.1
+numpy==2.5.4
+pandas==3.1.1
+scipy==1.18.1
+cloudpickle==3.1.2
+# el codigo del modelo (src/cruzado.py, src/entrenar.py) importa mlflow y matplotlib; la version ligera basta
+mlflow-skinny==3.18.0
+matplotlib
+threadpoolctl
+pyarrow
+pyyaml
+streamlit==1.67.0

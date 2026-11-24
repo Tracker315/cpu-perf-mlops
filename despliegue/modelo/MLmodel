@@ -1,0 +1,48 @@
+artifact_path: file:///mnt/c/Users/EliasRodriguez/Documents/GitHub/SingleCycle_Arch/myFiles/Masters/Automatic_Learn/Proj/mlartifacts/cpu-perf_cruzado/models/m-21830910f3284763b0736f024c65814e/artifacts
+flavors:
+  python_function:
+    code: code
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.3
+  sklearn:
+    code: code
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.9.1
+    skops_trusted_types: null
+is_signature_from_type_hint: false
+mlflow_version: 3.18.0
+model_id: m-21830910f3284763b0736f024c65814e
+model_size_bytes: 16911452
+model_uuid: m-21830910f3284763b0736f024c65814e
+prompts: null
+run_id: 425d4fff23e749678238bd623a62a8bb
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "double", "name": "cores", "required": true}, {"type": "double",
+    "name": "TDP", "required": false}, {"type": "long", "name": "anio", "required":
+    true}, {"type": "double", "name": "ghz_nombre", "required": false}, {"type": "string",
+    "name": "fabricante", "required": true}, {"type": "string", "name": "familia",
+    "required": true}, {"type": "string", "name": "socket", "required": true}, {"type":
+    "long", "name": "es_desktop", "required": true}, {"type": "long", "name": "es_laptop",
+    "required": true}, {"type": "long", "name": "es_server", "required": true}, {"type":
+    "long", "name": "es_mobile", "required": true}, {"type": "double", "name": "generacion",
+    "required": false}, {"type": "double", "name": "gama", "required": false}, {"type":
+    "string", "name": "sufijo", "required": true}, {"type": "double", "name": "l3_mb",
+    "required": false}, {"type": "double", "name": "proceso_nm", "required": false},
+    {"type": "double", "name": "base_ghz", "required": false}, {"type": "double",
+    "name": "turbo_ghz", "required": false}, {"type": "double", "name": "hilos", "required":
+    false}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2026-11-18 02:59:39.684792'

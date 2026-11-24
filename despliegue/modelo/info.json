@@ -1,0 +1,27 @@
+{
+  "modelo": "cpu-perf-multicore",
+  "version": 7,
+  "alias": "produccion",
+  "run_id": "425d4fff23e749678238bd623a62a8bb",
+  "registrado": "2026-11-17T20:59:44",
+  "descripcion": null,
+  "tags_version": {
+    "modelo": "cruzado: combo con nucleos reales + 353 CPUs de Blender traducidos a PassMark",
+    "temporal_multi_mae": "2441.6",
+    "data_version": "26",
+    "data_hash": "ecc4a219587e",
+    "fuente_blender": "opendata.blender.org CC0",
+    "nucleos": "reales (fichas oficiales / Blender)",
+    "version_codigo": "e88a5a8b05"
+  },
+  "tags_run": {
+    "etapa": "cruzado",
+    "data_version": "26",
+    "data_hash": "ecc4a219587e",
+    "version_codigo": "e88a5a8b05",
+    "fuente_blender": "opendata.blender.org CC0",
+    "modelo_b": "hibrido_hgb",
+    "ganador": "A' + pseudo-etiquetas"
+  },
+  "empaquetado": "2026-11-24T13:48:06"
+}

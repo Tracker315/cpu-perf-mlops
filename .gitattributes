@@ -1,0 +1,2 @@
+# los CSV se guardan byte por byte: su hash (md5) es la huella de la version de datos
+*.csv -text

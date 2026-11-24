@@ -1,0 +1,18 @@
+mlflow>=3.0
+scikit-learn>=1.6
+pandas
+numpy
+scipy
+matplotlib
+kagglehub
+fastapi
+uvicorn
+httpx
+threadpoolctl
+ipykernel
+openpyxl
+xgboost
+lightgbm
+catboost
+optuna
+# evidently: va en un entorno APARTE (aun no soporta pandas 3), ver README -> Monitoreo con Evidently

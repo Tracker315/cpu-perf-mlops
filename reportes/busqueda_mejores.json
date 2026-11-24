@@ -1,0 +1,161 @@
+{
+  "ridge": {
+    "params": {
+      "regressor__externos": true,
+      "regressor__modelo__alpha": 4.206039057901995,
+      "regressor__vida_media": 2
+    },
+    "mae": 2976.165494437305,
+    "mae_std": 397.6336561518186,
+    "peor_config": 5326.0126255191,
+    "n": 25,
+    "segundos": 2.951148271560669
+  },
+  "elasticnet": {
+    "params": {
+      "regressor__externos": true,
+      "regressor__modelo__alpha": 0.00042079886696066364,
+      "regressor__modelo__l1_ratio": 0.19819479431939252,
+      "regressor__vida_media": 3
+    },
+    "mae": 3133.301907152115,
+    "mae_std": 424.8959070628926,
+    "peor_config": 8358.499701292621,
+    "n": 25,
+    "segundos": 2.1820645332336426
+  },
+  "knn": {
+    "params": {
+      "regressor__externos": false,
+      "regressor__modelo__n_neighbors": 5,
+      "regressor__modelo__p": 2,
+      "regressor__modelo__weights": "distance"
+    },
+    "mae": 3522.0567519594842,
+    "mae_std": 413.9892491526117,
+    "peor_config": 5780.666338933401,
+    "n": 25,
+    "segundos": 1.8286528587341309
+  },
+  "svr": {
+    "params": {
+      "regressor__acotar": false,
+      "regressor__externos": false,
+      "regressor__modelo__C": 6.431904246624118,
+      "regressor__modelo__epsilon": 0.06199983918423046,
+      "regressor__modelo__gamma": 0.0035856126103453977,
+      "regressor__vida_media": 2
+    },
+    "mae": 2997.864563120804,
+    "mae_std": 509.4194102740996,
+    "peor_config": 8101.649835950264,
+    "n": 30,
+    "segundos": 13.107786178588867
+  },
+  "random_forest": {
+    "params": {
+      "regressor__externos": false,
+      "regressor__modelo__max_depth": "None",
+      "regressor__modelo__max_features": 0.7,
+      "regressor__modelo__min_samples_leaf": 2,
+      "regressor__modelo__n_estimators": 200,
+      "regressor__vida_media": 2
+    },
+    "mae": 3401.0106042317043,
+    "mae_std": 358.32608830536407,
+    "peor_config": 5151.157515117336,
+    "n": 30,
+    "segundos": 33.62443780899048
+  },
+  "extra_trees": {
+    "params": {
+      "regressor__externos": false,
+      "regressor__modelo__max_depth": "None",
+      "regressor__modelo__max_features": 0.7,
+      "regressor__modelo__min_samples_leaf": 2,
+      "regressor__modelo__n_estimators": 200,
+      "regressor__vida_media": 2
+    },
+    "mae": 3477.1542450722095,
+    "mae_std": 352.2526841846767,
+    "peor_config": 5515.715950779317,
+    "n": 30,
+    "segundos": 38.0914626121521
+  },
+  "hgb": {
+    "params": {
+      "regressor__externos": true,
+      "regressor__modelo__l2_regularization": 0.02394558871930169,
+      "regressor__modelo__learning_rate": 0.06329912491226306,
+      "regressor__modelo__max_features": 0.8,
+      "regressor__modelo__max_iter": 400,
+      "regressor__modelo__max_leaf_nodes": 25,
+      "regressor__modelo__min_samples_leaf": 24,
+      "regressor__vida_media": 8
+    },
+    "mae": 3257.475517384376,
+    "mae_std": 406.1154150777541,
+    "peor_config": 7410.5707348901215,
+    "n": 40,
+    "segundos": 87.8015251159668
+  },
+  "mlp": {
+    "params": {
+      "regressor__acotar": true,
+      "regressor__externos": false,
+      "regressor__modelo__activation": "tanh",
+      "regressor__modelo__alpha": 1.080283656749775,
+      "regressor__modelo__hidden_layer_sizes": "(64,)",
+      "regressor__modelo__learning_rate_init": 0.0036317484712120813,
+      "regressor__vida_media": 3
+    },
+    "mae": 2837.9602564019965,
+    "mae_std": 217.69981219257372,
+    "peor_config": 1478076.9510678085,
+    "n": 40,
+    "segundos": 128.59503149986267
+  },
+  "hibrido_bosque": {
+    "params": {
+      "regressor__alpha": 1.838163843313093,
+      "regressor__externos": true,
+      "regressor__max_features": 0.5,
+      "regressor__min_samples_leaf": 4,
+      "regressor__n_estimators": 200,
+      "regressor__vida_media": 2
+    },
+    "mae": 2734.722842387727,
+    "mae_std": 235.63105526465318,
+    "peor_config": 3339.092965494553,
+    "n": 35,
+    "segundos": 59.13488054275513
+  },
+  "hibrido_hgb": {
+    "params": {
+      "regressor__alpha": 235.7730502596829,
+      "regressor__externos": false,
+      "regressor__min_samples_leaf": 34,
+      "regressor__n_estimators": 200,
+      "regressor__vida_media": 2
+    },
+    "mae": 2647.2417788868815,
+    "mae_std": 270.5061443383954,
+    "peor_config": 3277.4948534242467,
+    "n": 30,
+    "segundos": 40.94827651977539
+  },
+  "hibrido_red": {
+    "params": {
+      "regressor__alpha": 34.42937589506553,
+      "regressor__alpha_red": 0.715191107817528,
+      "regressor__capas": "(64, 32)",
+      "regressor__externos": true,
+      "regressor__vida_media": "None"
+    },
+    "mae": 2758.811740593411,
+    "mae_std": 460.9236508516878,
+    "peor_config": 4007.8115884441004,
+    "n": 30,
+    "segundos": 40.03678345680237
+  }
+}

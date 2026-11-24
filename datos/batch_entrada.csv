@@ -1,0 +1,144 @@
+cpuName,price,cpuMark,cpuValue,threadMark,threadValue,TDP,powerPerf,cores,testDate,socket,category
+AMD Ryzen Threadripper PRO 5995WX,,108822,,3330,,280.0,388.65,64,2022,sWRX8,Desktop
+AMD Ryzen Threadripper PRO 5975WX,,80842,,3340,,280.0,288.72,32,2022,sWRX8,Desktop
+AMD Ryzen Threadripper PRO 5965WX,,68405,,3346,,280.0,244.3,24,2022,sWRX8,Desktop
+AMD Ryzen Threadripper PRO 5955WX,,51656,,3346,,280.0,184.48,16,2022,sWRX8,Desktop
+Intel Xeon Platinum 8347C @ 2.10GHz,,49386,,2445,,210.0,235.17,36,2022,LGA4189,Server
+AMD EPYC 7713P,,45860,,2736,,225.0,203.82,64,2022,SP3,Server
+Intel Core i9-12900KS,779.98,44243,56.72,4317,5.53,150.0,294.95,8,2022,LGA 1700,Desktop
+AMD Ryzen Threadripper PRO 5945WX,,41578,,3347,,280.0,148.49,12,2022,sWRX8,Desktop
+Apple M1 Ultra 20 Core,,41360,,3900,,60.0,689.34,16,2022,unknown,Desktop
+Intel Xeon W-3335 @ 3.40GHz,1299.0,38944,29.98,2556,1.97,250.0,155.78,16,2022,FCLGA4189,Server
+Intel Core i9-12900,509.0,38281,75.21,4162,8.18,65.0,588.95,8,2022,FCLGA1700,Desktop
+Intel Core i9-12900F,529.99,35726,67.41,4045,7.63,65.0,549.63,8,2022,FCLGA1700,Desktop
+Intel Core i9-12900T,489.0,34999,71.57,4032,8.25,35.0,999.97,8,2022,FCLGA1700,Desktop
+Intel Xeon D-2799 @ 2.40GHz,1933.0,33792,17.48,2404,1.24,129.0,261.95,20,2022,FCBGA2579,Server
+Intel Core i7-12700F,312.96,32268,103.11,3987,12.74,65.0,496.43,8,2022,FCLGA1700,Desktop
+Intel Core i7-12700,328.0,31659,96.52,3948,12.04,65.0,487.07,8,2022,FCLGA1700,Desktop
+Intel Core i9-12900HK,635.0,30213,47.58,3946,6.21,45.0,671.4,6,2022,FCBGA1744,Laptop
+Intel Core i9-12900H,617.0,29714,48.16,3974,6.44,45.0,660.32,6,2022,FCBGA1744,Laptop
+Intel Core i7-12700H,457.0,27391,59.94,3766,8.24,45.0,608.69,6,2022,FCBGA1744,Laptop
+AMD Ryzen 7 5700X,299.0,27065,90.52,3397,11.36,65.0,416.38,8,2022,AM4,Desktop
+Intel Xeon Gold 5318Y @ 2.10GHz,1361.0,26400,19.4,1826,1.34,165.0,160,24,2022,FCLGA4189,Server
+AMD Ryzen 7 5800X3D,599.0,25508,42.58,2850,4.76,105.0,242.93,8,2022,AM4,Desktop
+AMD Ryzen 7 6800HS,,25460,,3428,,35.0,727.44,8,2022,FP7,Laptop
+AMD Ryzen 9 6900HS,,24390,,3354,,35.0,696.86,8,2022,FP7,Laptop
+AMD Ryzen 7 PRO 6850U,,24352,,3442,,28.0,869.73,8,2022,FP7,Laptop
+Intel Core i5-12500H,311.0,23530,75.66,3678,11.83,45.0,522.9,4,2022,FCBGA1744,Laptop
+AMD Ryzen 7 6800H,,23447,,3311,,45.0,521.04,8,2022,FP7,Laptop
+Intel Core i5-1250P,,23120,,3619,,28.0,825.7,4,2022,BGA1700,Laptop
+Intel Core i7-12700T,339.0,22688,66.93,3295,9.72,35.0,648.24,8,2022,FCLGA1700,Desktop
+Intel Core i5-12600,238.97,21368,89.42,3883,16.25,65.0,328.73,6,2022,LGA 1700,Desktop
+AMD Ryzen 5 5600,189.99,21350,112.37,3208,16.88,65.0,328.46,6,2022,AM4,Desktop
+Intel Core i7-1270P,,21030,,3796,,28.0,751.07,4,2022,BGA1700,Laptop
+AMD Ryzen 9 5900H,,20960,,3312,,,,8,2022,AM4,Laptop
+AMD Ryzen 7 PRO 5875U,,20369,,2919,,15.0,"1,357.93",8,2022,FP6,Laptop
+Intel Core i5-12500,202.0,20309,100.54,3759,18.61,65.0,312.45,6,2022,LGA 1700,Desktop
+AMD Ryzen 5 5500,159.0,19949,125.46,3096,19.47,65.0,306.9,6,2022,AM4,Desktop
+Intel Core i5-12450H,311.0,19820,63.73,3628,11.66,45.0,440.44,4,2022,FCBGA1744,Laptop
+Intel Core i5-12400F,174.98,19659,112.35,3567,20.39,65.0,302.44,6,2022,FCLGA1700,Desktop
+Intel Core i5-12400,192.0,19571,101.93,3532,18.4,65.0,301.09,6,2022,LGA 1700,Desktop
+Intel Core i7-12800H,457.0,19052,41.69,3604,7.89,45.0,423.37,6,2022,FCBGA1744,Laptop
+Intel Core i5-1240P,,18963,,3356,,28.0,677.25,4,2022,FCBGA1744,Laptop
+ARM Neoverse-N1 80 Core 2600 MHz,,18823,,1127,,,,80,2022,unknown,Unknown
+Intel Xeon E-2356G @ 3.20GHz,333.0,18757,56.33,3507,10.53,80.0,234.47,6,2022,FCLGA1200,Server
+AMD Ryzen 5 PRO 6650U,,18649,,3277,,28.0,666.04,6,2022,FP7,Laptop
+Intel Xeon W-1270E @ 3.40GHz,367.0,18635,50.78,2990,8.15,80.0,232.94,8,2022,FCLGA1200,"Server, Mobile/Embedded"
+Intel Xeon E-2378 @ 2.60GHz,386.0,18248,47.28,3258,8.44,65.0,280.74,8,2022,FCLGA1200,Server
+Intel Core i5-12600T,,18202,,3805,,35.0,520.06,6,2022,FCLGA1700,Desktop
+AMD Ryzen 7 5825U,,18122,,3064,,15.0,"1,208.12",8,2022,AM4,Laptop
+Intel Core i5-12500T,202.0,17728,87.76,3618,17.91,35.0,506.53,6,2022,FCLGA1700,Desktop
+AMD Ryzen 5 4500,141.75,16698,117.8,2605,18.38,65.0,256.89,6,2022,AM4,Desktop
+Intel Core i7-1260P,,16020,,3067,,28.0,572.16,4,2022,BGA1700,Laptop
+AMD Ryzen 7 4850U Mobile,,15920,,2653,,15.0,"1,061.35",8,2022,FP6,Laptop
+Intel Xeon E-2336 @ 2.90GHz,304.0,15900,52.3,3353,11.03,65.0,244.61,6,2022,FCLGA1200,Server
+AMD Ryzen 5 5625U,,15099,,3050,,15.0,"1,006.60",6,2022,FP6,Laptop
+Intel Core i3-12300,143.0,14955,104.58,3673,25.68,60.0,249.26,4,2022,LGA 1700,Desktop
+Intel Core i3-12100,122.0,14503,118.88,3549,29.09,60.0,241.72,4,2022,LGA 1700,Desktop
+Intel Core i3-12100F,107.99,14490,134.18,3532,32.71,58.0,249.83,4,2022,FCLGA1700,Server
+AMD Ryzen 5 PRO 5675U,,14253,,2783,,15.0,950.21,6,2022,FP6,Laptop
+Intel Xeon E-2374G @ 3.70GHz,357.0,14086,39.46,3445,9.65,80.0,176.07,4,2022,FCLGA1200,Server
+Intel Xeon E-2334 @ 3.40GHz,305.99,13189,43.1,3244,10.6,65.0,202.9,4,2022,FCLGA1200,Server
+Intel Core i3-12100T,122.0,12767,104.65,3412,27.96,35.0,364.77,4,2022,FCLGA1700,Desktop
+Intel Core i7-1265U,426.0,12334,28.95,3422,8.03,15.0,822.28,2,2022,FCBGA1744,"Laptop, Mobile/Embedded"
+Intel Core i5-1245U,,11934,,3386,,15.0,795.59,2,2022,BGA1700,Mobile/Embedded
+Intel Core i5-1235U,309.0,11119,35.98,3335,10.79,15.0,741.27,2,2022,BGA1744,"Laptop, Mobile/Embedded"
+Intel Core i3-10325 @ 3.90GHz,154.0,10308,66.94,2890,18.77,65.0,158.59,4,2022,FCLGA1200,Desktop
+Intel Core i5-10500TE @ 2.30GHz,195.0,9960,51.08,2145,11.0,35.0,284.58,6,2022,FCLGA1200,"Laptop, Mobile/Embedded"
+AMD Ryzen 3 5425U,,9641,,2788,,15.0,642.72,4,2022,FP6,Laptop
+Intel Xeon D-1715TER @ 2.40GHz,285.0,9104,31.94,2269,7.96,50.0,182.08,4,2022,FCBGA2227,Server
+Intel Xeon E-2314 @ 2.80GHz,195.0,8422,43.19,3089,15.84,65.0,129.57,4,2022,FCLGA1200,Server
+AMD Ryzen 7 3700C,,7145,,2301,,15.0,476.32,4,2022,FP5,"Laptop, Mobile/Embedded"
+AMD Athlon Gold 3150G,,7002,,2308,,65.0,107.72,4,2022,AM4,Desktop
+Intel Pentium Gold G7400,66.99,6896,102.94,3084,46.03,46.0,149.92,2,2022,"LGA1700,BGA1700",Desktop
+Intel Pentium Gold 8505,,6771,,3112,,15.0,451.41,1,2022,BGA1700,"Laptop, Mobile/Embedded"
+AMD Ryzen Embedded R2314,,6643,,1969,,,,4,2022,unknown,Mobile/Embedded
+vendor Kirin985,,5834,,1894,,,,8,2022,unknown,Mobile/Embedded
+Intel Core i3-1115G4E @ 3.00GHz,285.0,5776,20.27,2552,8.95,15.0,385.06,2,2022,BGA 1449,Mobile/Embedded
+MT8195AV/ZA,,5735,,1840,,,,8,2022,unknown,Mobile/Embedded
+MT6883Z/CZA,,5665,,1694,,,,8,2022,unknown,Mobile/Embedded
+vendor Kirin820,,5502,,1682,,,,8,2022,unknown,Mobile/Embedded
+MT6877V/TZA,,4824,,2085,,,,8,2022,unknown,Mobile/Embedded
+Intel Celeron N5095A @ 2.00GHz,,4627,,1553,,15.0,308.49,4,2022,FCBGA1338,Desktop
+"Qualcomm Technologies, Inc SM6375",,4597,,1961,,,,8,2022,unknown,Mobile/Embedded
+MT6877T,,4442,,1591,,,,8,2022,unknown,Mobile/Embedded
+vendor Kirin810,,4409,,1582,,,,8,2022,unknown,Mobile/Embedded
+Intel Core i3-8140U @ 2.10GHz,,4227,,2135,,15.0,281.83,2,2022,FCBGA1528,Laptop
+Intel Pentium J6426 @ 2.00GHz,80.0,4173,52.17,1596,19.95,10.0,417.34,4,2022,FCBGA1493,Mobile/Embedded
+Intel Atom x6425E @ 2.00GHz,56.0,4153,74.15,1602,28.61,12.0,346.04,4,2022,FCBGA1493,Mobile/Embedded
+MT6781,,3937,,1337,,,,8,2022,unknown,Mobile/Embedded
+Intel Core i3-1115GRE @ 3.00GHz,338.0,3816,11.29,1880,5.56,15.0,254.38,2,2022,FCBGA1449,Mobile/Embedded
+MT8789V/CT,,3800,,1441,,,,8,2022,unknown,Mobile/Embedded
+DG1301SML87HY,,3624,,727,,,,8,2022,unknown,Unknown
+Intel Pentium Gold G5600T @ 3.30GHz,,3601,,2025,,35.0,102.87,2,2022,FCLGA1151,Desktop
+"Qualcomm Technologies, Inc KHAJE",,3458,,1169,,,,8,2022,unknown,Mobile/Embedded
+Intel Celeron G6900,49.99,3446,68.93,2587,51.76,46.0,74.91,2,2022,"LGA1700,BGA1700",Desktop
+Intel Core i3-1110G4 @ 1.80GHz,281.0,3421,12.18,1986,7.07,,,2,2022,FCBGA1598,Mobile/Embedded
+06/9c,,3191,,1439,,,,4,2022,unknown,Mobile/Embedded
+MT8786V/CA,,3131,,1164,,,,8,2022,unknown,Mobile/Embedded
+vendor Kirin710,,3066,,1050,,,,8,2022,unknown,Mobile/Embedded
+Intel Atom x6425RE @ 1.90GHz,59.0,2903,49.2,1021,17.3,12.0,241.9,4,2022,FCBGA1493,Mobile/Embedded
+ARM D2000/8 8 Core 2300 MHz,,2633,,585,,,,8,2022,unknown,Unknown
+1-Unisoc,,2596,,1083,,,,8,2022,unknown,Mobile/Embedded
+T618,,2393,,1162,,,,8,2022,unknown,Mobile/Embedded
+Intel Celeron N4505 @ 2.00GHz,,2367,,1537,,10.0,236.75,2,2022,FCBGA1338,Mobile/Embedded
+MT6765H,,2183,,631,,,,8,2022,unknown,Mobile/Embedded
+Hardkernel ODROID-N2Plus,,2115,,888,,,,6,2022,unknown,Mobile/Embedded
+"Qualcomm Technologies, Inc SM6225",,2095,,974,,,,8,2022,unknown,Mobile/Embedded
+"Qualcomm Technologies, Inc 450",,1978,,459,,,,8,2022,unknown,Mobile/Embedded
+AMD Athlon X4 730,,1936,,562,,65.0,29.78,2,2022,FM2,Desktop
+UIS7862A,,1839,,951,,,,8,2022,unknown,Mobile/Embedded
+Snapdragon 888,,1630,,1190,,,,4,2022,unknown,Mobile/Embedded
+Unisoc T310,,1606,,1154,,,,4,2022,unknown,Mobile/Embedded
+"Qualcomm Technologies, Inc. MSM8940-PMI8940 MTP",,1426,,404,,,,8,2022,unknown,Mobile/Embedded
+ASUS Tinker Board 2/2S,,1423,,890,,,,6,2022,unknown,Mobile/Embedded
+MT6750V/C,,1318,,413,,,,8,2022,unknown,Mobile/Embedded
+ARM Cortex-A57 4 Core 2091 MHz,,1311,,449,,,,4,2022,unknown,Unknown
+Hisilicon Kirin 935,,1291,,328,,,,8,2022,unknown,Mobile/Embedded
+BCM2835,,1231,,696,,,,4,2022,unknown,Mobile/Embedded
+MT6755V/BM,,1219,,520,,,,8,2022,unknown,Mobile/Embedded
+ROC-RK3568-PC HDMI (Android),,1197,,551,,,,4,2022,unknown,Mobile/Embedded
+ARM Cortex-A72 6 Core 1512 MHz,,1192,,522,,,,6,2022,unknown,Unknown
+Rockchip RK3568 EVB1 DDR4 V10 Board,,1189,,556,,,,4,2022,unknown,Mobile/Embedded
+MT8173,,1077,,848,,,,4,2022,unknown,Mobile/Embedded
+Rockchip RK3566 BOX DEMO V10 ANDROID Board,,1058,,516,,,,4,2022,unknown,Mobile/Embedded
+MT6750V/CS,,955,,384,,,,8,2022,unknown,Mobile/Embedded
+UGOOS UT8 Board,,894,,543,,,,4,2022,unknown,Mobile/Embedded
+ARM FT-2000/4 4 Core 2200 MHz,,881,,565,,,,4,2022,unknown,Unknown
+MT8161AA,,857,,419,,,,4,2022,unknown,Mobile/Embedded
+MT8161A,,800,,374,,,,4,2022,unknown,Mobile/Embedded
+"rockchip,rk3328",,761,,356,,,,4,2022,unknown,Mobile/Embedded
+ARM Cortex-A55 4 Core 2124 MHz,,742,,336,,,,4,2022,unknown,Unknown
+ARM Cortex-A55 4 Core 1992 MHz,,741,,328,,,,4,2022,unknown,Unknown
+MT8696,,736,,533,,,,4,2022,unknown,Mobile/Embedded
+Intel Atom Z3560 @ 1.00GHz,,710,,495,,,,4,2022,unknown,Mobile/Embedded
+MT5893,,702,,641,,,,4,2022,unknown,Mobile/Embedded
+AMD TurionX2 Ultra DualCore Mobile ZM-87,,599,,770,,35.0,17.13,2,2022,S1,Mobile/Embedded
+Pentium Dual-Core T4200 @ 2.00GHz,,578,,783,,,,2,2022,unknown,Mobile/Embedded
+MT8735A,,527,,343,,,,4,2022,unknown,Mobile/Embedded
+MT8161P,,434,,259,,,,4,2022,unknown,Mobile/Embedded
+Qualcomm MSM8916,,424,,314,,,,4,2022,unknown,Mobile/Embedded
+ARM Cortex-A53 4 Core 1600 MHz,,400,,163,,,,4,2022,unknown,Unknown
+ARM ARMv7 rev 4 (v7l) 4 Core 1400 MHz,,399,,273,,,,4,2022,unknown,Unknown
+ARM Cortex-A7 4 Core 1300 MHz,,354,,253,,,,4,2022,unknown,Unknown
+ARM Cortex-A35 4 Core 1296 MHz,,334,,166,,,,4,2022,unknown,Unknown

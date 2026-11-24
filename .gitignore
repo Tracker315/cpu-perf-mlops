@@ -1,0 +1,25 @@
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+# datos/raw/ SI se guarda: copia versionada de PassMark (respaldo si Kaggle no responde)
+# logs de cron
+logs/
+# artifacts de mlflow (modelos, ~1GB); se regeneran con el pipeline
+mlartifacts/
+# snapshot de Blender Open Data (~100MB); se vuelve a bajar con src.blender
+datos/externos/blender/*.zip
+
+# Evidently: reportes HTML (~9 MB) y datos de entrada; se regeneran y quedan en MLflow
+reportes/evidently/*.html
+reportes/evidently/*.parquet
+
+# nube (GitHub Actions)
+.evidently/
+.inicio
+pipeline.log
+.despliegue_nuevo/
+
+# estado de MLflow: vive en el repo PRIVADO de Hugging Face (src/nube.py). En el repo publico no se sube.
+mlflow.db
+monitoreo.db

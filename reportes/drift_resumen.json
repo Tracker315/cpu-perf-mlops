@@ -1,0 +1,60 @@
+{
+  "corte": "<= 2019 vs > 2019",
+  "n_viejos": 2834,
+  "n_nuevos": 991,
+  "label_drift": {
+    "psi": 0.4905124352144149,
+    "ks": 0.2674725315418157,
+    "p_valor": 9.760587454269682e-47,
+    "mediana_ref": 2003.0,
+    "mediana_nuevos": 4396.0
+  },
+  "concept_drift": {
+    "mae_viejos": 532.8578156110029,
+    "mae_nuevos": 3727.390603580951,
+    "r2_log_viejos": 0.9700186531661261,
+    "r2_log_nuevos": 0.6342085350934332,
+    "dentro20_viejos": 0.7692307692307693,
+    "dentro20_nuevos": 0.29868819374369326,
+    "sesgo_log_medio_nuevos": -0.34297299354724525,
+    "factor_subestimacion": 0.7096573766298312
+  },
+  "variables_con_drift_fuerte": [
+    "fabricante",
+    "es_mobile",
+    "cores",
+    "familia",
+    "TDP"
+  ],
+  "evidently": {
+    "ok": true,
+    "columnas_revisadas": 18,
+    "columnas_con_drift": 17,
+    "pct_columnas_con_drift": 0.9444444444444444,
+    "con_drift": [
+      "cores",
+      "TDP",
+      "ghz_nombre",
+      "generacion",
+      "gama",
+      "l3_mb",
+      "proceso_nm",
+      "base_ghz",
+      "turbo_ghz",
+      "hilos",
+      "fabricante",
+      "familia",
+      "sufijo",
+      "socket",
+      "es_desktop",
+      "es_laptop",
+      "es_mobile"
+    ],
+    "coincide_con_psi_pct": 0.8888888888888888,
+    "variables_comparadas_con_psi": 9,
+    "html": [
+      "reportes/evidently/evidently_data_drift.html",
+      "reportes/evidently/evidently_modelo.html"
+    ]
+  }
+}

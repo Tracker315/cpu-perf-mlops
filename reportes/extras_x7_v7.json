@@ -1,0 +1,62 @@
+{
+  "Combo (base actual de v7)": {
+    "mae": 2440.1208303898047,
+    "kpi_dentro_20pct": 0.4937617043052415,
+    "mae_sin_pseudo": 2459.438873855624,
+    "mae_corte_2016": 2053.3683699339913,
+    "mae_corte_2017": 2461.244058605213,
+    "mae_corte_2018": 2649.509190975668,
+    "mae_corte_2019": 2435.414667148494,
+    "mae_corte_2020": 2601.067865285658,
+    "futuro_n": 323.0,
+    "futuro_solo contar nucleos": 0.8246946687775955,
+    "futuro_A' (nucleos reales)": 0.7713246791081697,
+    "futuro_C(B)": 0.8055920222194831,
+    "futuro_mezcla final (peso A 0.9)": 0.783403199104112
+  },
+  "hibrido recta + HGB": {
+    "mae": 2545.136119951864,
+    "kpi_dentro_20pct": 0.4719958698343201,
+    "mae_sin_pseudo": 2557.5830352587273,
+    "mae_corte_2016": 2524.242445030019,
+    "mae_corte_2017": 2310.3604831340276,
+    "mae_corte_2018": 2627.748440218376,
+    "mae_corte_2019": 2540.722002222533,
+    "mae_corte_2020": 2722.607229154366,
+    "futuro_n": 323.0,
+    "futuro_solo contar nucleos": 0.8246946687775955,
+    "futuro_A' (nucleos reales)": 0.7189389077901301,
+    "futuro_C(B)": 0.8055920222194831,
+    "futuro_mezcla final (peso A 1.0)": 0.7189389077901301
+  },
+  "hibrido recta + HGB + monotonia suave": {
+    "mae": 2436.2594673996173,
+    "kpi_dentro_20pct": 0.4928381829644829,
+    "mae_sin_pseudo": 2431.599988875648,
+    "mae_corte_2016": 1962.662066076367,
+    "mae_corte_2017": 2208.208246496654,
+    "mae_corte_2018": 2821.7903675497605,
+    "mae_corte_2019": 2507.9326409223117,
+    "mae_corte_2020": 2680.704015952993,
+    "futuro_n": 323.0,
+    "futuro_solo contar nucleos": 0.8246946687775955,
+    "futuro_A' (nucleos reales)": 0.7273573357081956,
+    "futuro_C(B)": 0.8055920222194831,
+    "futuro_mezcla final (peso A 1.0)": 0.7273573357081956
+  },
+  "hibrido recta + HGB + monotonia completa": {
+    "mae": 2523.5896642102816,
+    "kpi_dentro_20pct": 0.4750833505606595,
+    "mae_sin_pseudo": 2501.3937313848483,
+    "mae_corte_2016": 1926.554023959877,
+    "mae_corte_2017": 2382.0258716518447,
+    "mae_corte_2018": 2971.9414958133552,
+    "mae_corte_2019": 2625.6673534699357,
+    "mae_corte_2020": 2711.759576156397,
+    "futuro_n": 323.0,
+    "futuro_solo contar nucleos": 0.8246946687775955,
+    "futuro_A' (nucleos reales)": 0.7234739619160424,
+    "futuro_C(B)": 0.8055920222194831,
+    "futuro_mezcla final (peso A 1.0)": 0.7234739619160424
+  }
+}

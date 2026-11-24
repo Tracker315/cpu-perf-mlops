@@ -1,0 +1,8 @@
+{
+  "esquema": "OK - completo",
+  "filas": "OK - 3825 filas (minimo 1000)",
+  "objetivo_sin_nulos": "OK - 0.0% nulos en cpuMark",
+  "nulos_por_columna": "OK - {'price': 0.486, 'cpuValue': 0.486, 'threadValue': 0.486, 'TDP': 0.179, 'powerPerf': 0.179}",
+  "rangos": "OK - todo en rango",
+  "duplicados": "OK - 0 nombres repetidos"
+}

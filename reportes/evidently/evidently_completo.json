@@ -1,0 +1,1991 @@
+{
+ "datos": {
+  "metrics": [
+   {
+    "id": "3525ed66e834563560875ea8c0dd23fc",
+    "metric_name": "DriftedColumnsCount(columns=cores,TDP,ghz_nombre,generacion,gama,l3_mb,proceso_nm,base_ghz,turbo_ghz,hilos,fabricante,familia,sufijo,socket,es_desktop,es_laptop,es_server,es_mobile,drift_share=0.5)",
+    "config": {
+     "type": "evidently:metric_v2:DriftedColumnsCount",
+     "columns": [
+      "cores",
+      "TDP",
+      "ghz_nombre",
+      "generacion",
+      "gama",
+      "l3_mb",
+      "proceso_nm",
+      "base_ghz",
+      "turbo_ghz",
+      "hilos",
+      "fabricante",
+      "familia",
+      "sufijo",
+      "socket",
+      "es_desktop",
+      "es_laptop",
+      "es_server",
+      "es_mobile"
+     ],
+     "drift_share": 0.5
+    },
+    "value": {
+     "count": 17.0,
+     "share": 0.9444444444444444
+    }
+   },
+   {
+    "id": "b8dddcfdb5e2a8f545d16bad3d29fa99",
+    "metric_name": "ValueDrift(column=cores,method=Wasserstein distance (normed),threshold=0.1)",
+    "config": {
+     "type": "evidently:metric_v2:ValueDrift",
+     "column": "cores",
+     "method": "Wasserstein distance (normed)",
+     "threshold": 0.1
+    },
+    "value": 1.0034878975281216
+   },
+   {
+    "id": "b49144575e777bccd7b270cf670e07bd",
+    "metric_name": "ValueDrift(column=TDP,method=Wasserstein distance (normed),threshold=0.1)",
+    "config": {
+     "type": "evidently:metric_v2:ValueDrift",
+     "column": "TDP",
+     "method": "Wasserstein distance (normed)",
+     "threshold": 0.1
+    },
+    "value": 0.43004845457647606
+   },
+   {
+    "id": "31a99f58dbf699963593b7933d772f08",
+    "metric_name": "ValueDrift(column=ghz_nombre,method=Wasserstein distance (normed),threshold=0.1)",
+    "config": {
+     "type": "evidently:metric_v2:ValueDrift",
+     "column": "ghz_nombre",
+     "method": "Wasserstein distance (normed)",
+     "threshold": 0.1
+    },
+    "value": 0.1555490279690404
+   },
+   {
+    "id": "a5211b03508cd1cf6451fe804f136b3e",
+    "metric_name": "ValueDrift(column=generacion,method=K-S p_value,threshold=0.05)",
+    "config": {
+     "type": "evidently:metric_v2:ValueDrift",
+     "column": "generacion",
+     "method": "K-S p_value",
+     "threshold": 0.05
+    },
+    "value": 1.0685644232657799e-33
+   },
+   {
+    "id": "9065130527b99c972f8e1227778512db",
+    "metric_name": "ValueDrift(column=gama,method=K-S p_value,threshold=0.05)",
+    "config": {
+     "type": "evidently:metric_v2:ValueDrift",
+     "column": "gama",
+     "method": "K-S p_value",
+     "threshold": 0.05
+    },
+    "value": 4.450333614012158e-06
+   },
+   {
+    "id": "6c700439da69c96b7452cfcd61002e19",
+    "metric_name": "ValueDrift(column=l3_mb,method=K-S p_value,threshold=0.05)",
+    "config": {
+     "type": "evidently:metric_v2:ValueDrift",
+     "column": "l3_mb",
+     "method": "K-S p_value",
+     "threshold": 0.05
+    },
+    "value": 6.843862398138323e-42
+   },
+   {
+    "id": "3e9e7a81b9321a5faf1bafb31f04ba35",
+    "metric_name": "ValueDrift(column=proceso_nm,method=Wasserstein distance (normed),threshold=0.1)",
+    "config": {
+     "type": "evidently:metric_v2:ValueDrift",
+     "column": "proceso_nm",
+     "method": "Wasserstein distance (normed)",
+     "threshold": 0.1
+    },
+    "value": 0.9133407672741302
+   },
+   {
+    "id": "a6e711471342de2fad77c36b666e189b",
+    "metric_name": "ValueDrift(column=base_ghz,method=Wasserstein distance (normed),threshold=0.1)",
+    "config": {
+     "type": "evidently:metric_v2:ValueDrift",
+     "column": "base_ghz",
+     "method": "Wasserstein distance (normed)",
+     "threshold": 0.1
+    },
+    "value": 0.28749958377637413
+   },
+   {
+    "id": "64c86f8e1c935489817a25c4b0752704",
+    "metric_name": "ValueDrift(column=turbo_ghz,method=Wasserstein distance (normed),threshold=0.1)",
+    "config": {
+     "type": "evidently:metric_v2:ValueDrift",
+     "column": "turbo_ghz",
+     "method": "Wasserstein distance (normed)",
+     "threshold": 0.1
+    },
+    "value": 1.4311743238334282
+   },
+   {
+    "id": "d82cd5e36124cd594358b7940e775bc4",
+    "metric_name": "ValueDrift(column=hilos,method=K-S p_value,threshold=0.05)",
+    "config": {
+     "type": "evidently:metric_v2:ValueDrift",
+     "column": "hilos",
+     "method": "K-S p_value",
+     "threshold": 0.05
+    },
+    "value": 1.459138844508859e-06
+   },
+   {
+    "id": "d8c05346811f96170cf9cf68193a6795",
+    "metric_name": "ValueDrift(column=fabricante,method=Jensen-Shannon distance,threshold=0.1)",
+    "config": {
+     "type": "evidently:metric_v2:ValueDrift",
+     "column": "fabricante",
+     "method": "Jensen-Shannon distance",
+     "threshold": 0.1
+    },
+    "value": 0.44480951758786996
+   },
+   {
+    "id": "9406772628a59f6a7586fc947b85aa21",
+    "metric_name": "ValueDrift(column=familia,method=Jensen-Shannon distance,threshold=0.1)",
+    "config": {
+     "type": "evidently:metric_v2:ValueDrift",
+     "column": "familia",
+     "method": "Jensen-Shannon distance",
+     "threshold": 0.1
+    },
+    "value": 0.3749228847011956
+   },
+   {
+    "id": "2e3ab5b9488aee955c6af3fed2368df7",
+    "metric_name": "ValueDrift(column=sufijo,method=Jensen-Shannon distance,threshold=0.1)",
+    "config": {
+     "type": "evidently:metric_v2:ValueDrift",
+     "column": "sufijo",
+     "method": "Jensen-Shannon distance",
+     "threshold": 0.1
+    },
+    "value": 0.18901539741397036
+   },
+   {
+    "id": "c89ad5da74079db872c9a105d746160a",
+    "metric_name": "ValueDrift(column=socket,method=Jensen-Shannon distance,threshold=0.1)",
+    "config": {
+     "type": "evidently:metric_v2:ValueDrift",
+     "column": "socket",
+     "method": "Jensen-Shannon distance",
+     "threshold": 0.1
+    },
+    "value": 0.6496799812786994
+   },
+   {
+    "id": "a670a0b35f9e0d7a74e7ac3e4c33b056",
+    "metric_name": "ValueDrift(column=es_desktop,method=Jensen-Shannon distance,threshold=0.1)",
+    "config": {
+     "type": "evidently:metric_v2:ValueDrift",
+     "column": "es_desktop",
+     "method": "Jensen-Shannon distance",
+     "threshold": 0.1
+    },
+    "value": 0.11446005658405074
+   },
+   {
+    "id": "41203558c8e00d2314d8ae4fcfb8f6c1",
+    "metric_name": "ValueDrift(column=es_laptop,method=Jensen-Shannon distance,threshold=0.1)",
+    "config": {
+     "type": "evidently:metric_v2:ValueDrift",
+     "column": "es_laptop",
+     "method": "Jensen-Shannon distance",
+     "threshold": 0.1
+    },
+    "value": 0.1664909912255369
+   },
+   {
+    "id": "a66ca177933866447be78ed257c50fa2",
+    "metric_name": "ValueDrift(column=es_server,method=Jensen-Shannon distance,threshold=0.1)",
+    "config": {
+     "type": "evidently:metric_v2:ValueDrift",
+     "column": "es_server",
+     "method": "Jensen-Shannon distance",
+     "threshold": 0.1
+    },
+    "value": 0.08487054298375708
+   },
+   {
+    "id": "f6e0ec6dbc86488c15657309c90fbc5d",
+    "metric_name": "ValueDrift(column=es_mobile,method=Jensen-Shannon distance,threshold=0.1)",
+    "config": {
+     "type": "evidently:metric_v2:ValueDrift",
+     "column": "es_mobile",
+     "method": "Jensen-Shannon distance",
+     "threshold": 0.1
+    },
+    "value": 0.41483770863522756
+   },
+   {
+    "id": "00404ffe284d7862baa4095093452630",
+    "metric_name": "RowCount()",
+    "config": {
+     "type": "evidently:metric_v2:RowCount"
+    },
+    "value": 991.0
+   },
+   {
+    "id": "91e498263b6502661774b15eb39ea154",
+    "metric_name": "ColumnCount()",
+    "config": {
+     "type": "evidently:metric_v2:ColumnCount"
+    },
+    "value": 18.0
+   },
+   {
+    "id": "31b8c78bad2b7108842265cd082d5abf",
+    "metric_name": "ColumnCount(column_type=ColumnType.Numerical)",
+    "config": {
+     "type": "evidently:metric_v2:ColumnCount",
+     "tests": [],
+     "column_type": "ColumnType.Numerical"
+    },
+    "value": 10.0
+   },
+   {
+    "id": "bb154bb9a843cad0d72fa3dc4983394d",
+    "metric_name": "ColumnCount(column_type=ColumnType.Categorical)",
+    "config": {
+     "type": "evidently:metric_v2:ColumnCount",
+     "tests": [],
+     "column_type": "ColumnType.Categorical"
+    },
+    "value": 8.0
+   },
+   {
+    "id": "012cbfb269361272d4773e1a68559396",
+    "metric_name": "ColumnCount(column_type=ColumnType.Datetime)",
+    "config": {
+     "type": "evidently:metric_v2:ColumnCount",
+     "tests": [],
+     "column_type": "ColumnType.Datetime"
+    },
+    "value": 0.0
+   },
+   {
+    "id": "3f5e595e26bc8e120aadf51967bb0355",
+    "metric_name": "ColumnCount(column_type=ColumnType.Text)",
+    "config": {
+     "type": "evidently:metric_v2:ColumnCount",
+     "tests": [],
+     "column_type": "ColumnType.Text"
+    },
+    "value": 0.0
+   },
+   {
+    "id": "ff1caea5e148b287bd5348d4bb40eccf",
+    "metric_name": "DuplicatedRowCount()",
+    "config": {
+     "type": "evidently:metric_v2:DuplicatedRowCount"
+    },
+    "value": 409.0
+   },
+   {
+    "id": "02fbcbd017b30a0b075d9d5a72ce2a32",
+    "metric_name": "DuplicatedColumnsCount()",
+    "config": {
+     "type": "evidently:metric_v2:DuplicatedColumnsCount"
+    },
+    "value": 0.0
+   },
+   {
+    "id": "4c2efb888b5c5f8afb50895b4b4abcec",
+    "metric_name": "AlmostDuplicatedColumnsCount()",
+    "config": {
+     "type": "evidently:metric_v2:AlmostDuplicatedColumnsCount"
+    },
+    "value": 0.0
+   },
+   {
+    "id": "9e9fa5ec57528fadbf97a35ad5b66838",
+    "metric_name": "AlmostConstantColumnsCount()",
+    "config": {
+     "type": "evidently:metric_v2:AlmostConstantColumnsCount"
+    },
+    "value": 0.0
+   },
+   {
+    "id": "c86e32eba7f3826051b804c0df7a97fe",
+    "metric_name": "EmptyRowsCount()",
+    "config": {
+     "type": "evidently:metric_v2:EmptyRowsCount"
+    },
+    "value": 0.0
+   },
+   {
+    "id": "ce527bc2e35349e7f7a2e047a57f85ca",
+    "metric_name": "EmptyColumnsCount()",
+    "config": {
+     "type": "evidently:metric_v2:EmptyColumnsCount"
+    },
+    "value": 0.0
+   },
+   {
+    "id": "5f958296980b95bddb41264800ab7a93",
+    "metric_name": "ConstantColumnsCount()",
+    "config": {
+     "type": "evidently:metric_v2:ConstantColumnsCount"
+    },
+    "value": 0.0
+   },
+   {
+    "id": "89b8d715e93a15e3acbc483410aff2f4",
+    "metric_name": "DatasetMissingValueCount()",
+    "config": {
+     "type": "evidently:metric_v2:DatasetMissingValueCount"
+    },
+    "value": {
+     "count": 6324.0,
+     "share": 6.381432896064581
+    }
+   },
+   {
+    "id": "bb6709c8f3a163c1cef7b9f972651ed5",
+    "metric_name": "MissingValueCount(column=cores)",
+    "config": {
+     "type": "evidently:metric_v2:MissingValueCount",
+     "column": "cores"
+    },
+    "value": {
+     "count": 0.0,
+     "share": 0.0
+    }
+   },
+   {
+    "id": "8edf2d7646bf85d9a052885a0679cf9c",
+    "metric_name": "MinValue(column=cores)",
+    "config": {
+     "type": "evidently:metric_v2:MinValue",
+     "column": "cores"
+    },
+    "value": 1.0
+   },
+   {
+    "id": "9b03192134aab566139590167761967b",
+    "metric_name": "MaxValue(column=cores)",
+    "config": {
+     "type": "evidently:metric_v2:MaxValue",
+     "column": "cores"
+    },
+    "value": 80.0
+   },
+   {
+    "id": "12663d8e3a42a95f46994aa4c2bd309e",
+    "metric_name": "MeanValue(column=cores)",
+    "config": {
+     "type": "evidently:metric_v2:MeanValue",
+     "column": "cores"
+    },
+    "value": 8.234106962663976
+   },
+   {
+    "id": "0400b02225993786ecb6c86a82be7829",
+    "metric_name": "StdValue(column=cores)",
+    "config": {
+     "type": "evidently:metric_v2:StdValue",
+     "column": "cores"
+    },
+    "value": 9.038620122666996
+   },
+   {
+    "id": "83d642cc95cf96d924d8aa6771c39949",
+    "metric_name": "QuantileValue(column=cores,quantile=0.25)",
+    "config": {
+     "type": "evidently:metric_v2:QuantileValue",
+     "column": "cores",
+     "quantile": 0.25
+    },
+    "value": 4.0
+   },
+   {
+    "id": "129fdbdb6fbb70dd12f507f8b991e9b1",
+    "metric_name": "QuantileValue(column=cores,quantile=0.5)",
+    "config": {
+     "type": "evidently:metric_v2:QuantileValue",
+     "column": "cores",
+     "quantile": 0.5
+    },
+    "value": 8.0
+   },
+   {
+    "id": "744b5be2622f86e9d014c2537c896de0",
+    "metric_name": "QuantileValue(column=cores,quantile=0.75)",
+    "config": {
+     "type": "evidently:metric_v2:QuantileValue",
+     "column": "cores",
+     "quantile": 0.75
+    },
+    "value": 8.0
+   },
+   {
+    "id": "69711e1018b3c5c84e69c8e4f32b39f1",
+    "metric_name": "MissingValueCount(column=TDP)",
+    "config": {
+     "type": "evidently:metric_v2:MissingValueCount",
+     "column": "TDP"
+    },
+    "value": {
+     "count": 491.0,
+     "share": 0.4954591321897074
+    }
+   },
+   {
+    "id": "715516398165f357b86566e0354fd4ae",
+    "metric_name": "MinValue(column=TDP)",
+    "config": {
+     "type": "evidently:metric_v2:MinValue",
+     "column": "TDP"
+    },
+    "value": 5.0
+   },
+   {
+    "id": "0230a919fd279baa68a5d076725fd74e",
+    "metric_name": "MaxValue(column=TDP)",
+    "config": {
+     "type": "evidently:metric_v2:MaxValue",
+     "column": "TDP"
+    },
+    "value": 300.0
+   },
+   {
+    "id": "757466896113f0f898a445fd4e415cb8",
+    "metric_name": "MeanValue(column=TDP)",
+    "config": {
+     "type": "evidently:metric_v2:MeanValue",
+     "column": "TDP"
+    },
+    "value": 76.2072
+   },
+   {
+    "id": "6a9b404068df49285282f39e09716840",
+    "metric_name": "StdValue(column=TDP)",
+    "config": {
+     "type": "evidently:metric_v2:StdValue",
+     "column": "TDP"
+    },
+    "value": 70.1153228985672
+   },
+   {
+    "id": "3a2226c3b0b8d48b20fbb59b83bb27f2",
+    "metric_name": "QuantileValue(column=TDP,quantile=0.25)",
+    "config": {
+     "type": "evidently:metric_v2:QuantileValue",
+     "column": "TDP",
+     "quantile": 0.25
+    },
+    "value": 28.0
+   },
+   {
+    "id": "00e5039c0e56d9e925813e4c1c81ace5",
+    "metric_name": "QuantileValue(column=TDP,quantile=0.5)",
+    "config": {
+     "type": "evidently:metric_v2:QuantileValue",
+     "column": "TDP",
+     "quantile": 0.5
+    },
+    "value": 48.0
+   },
+   {
+    "id": "d713a266e5f5b85ae0461e6daa9a6b5b",
+    "metric_name": "QuantileValue(column=TDP,quantile=0.75)",
+    "config": {
+     "type": "evidently:metric_v2:QuantileValue",
+     "column": "TDP",
+     "quantile": 0.75
+    },
+    "value": 105.0
+   },
+   {
+    "id": "9196a4dfacebb6e63feaf9d3aff525a8",
+    "metric_name": "MissingValueCount(column=ghz_nombre)",
+    "config": {
+     "type": "evidently:metric_v2:MissingValueCount",
+     "column": "ghz_nombre"
+    },
+    "value": {
+     "count": 632.0,
+     "share": 0.6377396569122099
+    }
+   },
+   {
+    "id": "e949d035af8d7ea104121cbfca374c7b",
+    "metric_name": "MinValue(column=ghz_nombre)",
+    "config": {
+     "type": "evidently:metric_v2:MinValue",
+     "column": "ghz_nombre"
+    },
+    "value": 0.9
+   },
+   {
+    "id": "3a85dcfb6380d18e9734fd762b088948",
+    "metric_name": "MaxValue(column=ghz_nombre)",
+    "config": {
+     "type": "evidently:metric_v2:MaxValue",
+     "column": "ghz_nombre"
+    },
+    "value": 4.3
+   },
+   {
+    "id": "14d482ff3ba7cfc24a65d6b36b448d22",
+    "metric_name": "MeanValue(column=ghz_nombre)",
+    "config": {
+     "type": "evidently:metric_v2:MeanValue",
+     "column": "ghz_nombre"
+    },
+    "value": 2.5137520891364904
+   },
+   {
+    "id": "b0292653747f9d5ac8be07ba618685b6",
+    "metric_name": "StdValue(column=ghz_nombre)",
+    "config": {
+     "type": "evidently:metric_v2:StdValue",
+     "column": "ghz_nombre"
+    },
+    "value": 0.8129291972301834
+   },
+   {
+    "id": "a76a8afe52e082ad79b45b915cd31e08",
+    "metric_name": "QuantileValue(column=ghz_nombre,quantile=0.25)",
+    "config": {
+     "type": "evidently:metric_v2:QuantileValue",
+     "column": "ghz_nombre",
+     "quantile": 0.25
+    },
+    "value": 2.0
+   },
+   {
+    "id": "182e85acc493f79f415fcb8cad01c254",
+    "metric_name": "QuantileValue(column=ghz_nombre,quantile=0.5)",
+    "config": {
+     "type": "evidently:metric_v2:QuantileValue",
+     "column": "ghz_nombre",
+     "quantile": 0.5
+    },
+    "value": 2.5
+   },
+   {
+    "id": "e739b7e12755cebac8437e52f52aa0fb",
+    "metric_name": "QuantileValue(column=ghz_nombre,quantile=0.75)",
+    "config": {
+     "type": "evidently:metric_v2:QuantileValue",
+     "column": "ghz_nombre",
+     "quantile": 0.75
+    },
+    "value": 3.2
+   },
+   {
+    "id": "2d3db55136f70ac46ae2dfca904babf0",
+    "metric_name": "MissingValueCount(column=generacion)",
+    "config": {
+     "type": "evidently:metric_v2:MissingValueCount",
+     "column": "generacion"
+    },
+    "value": {
+     "count": 700.0,
+     "share": 0.7063572149344097
+    }
+   },
+   {
+    "id": "ceb74274979fa1c18a60283822641f47",
+    "metric_name": "MinValue(column=generacion)",
+    "config": {
+     "type": "evidently:metric_v2:MinValue",
+     "column": "generacion"
+    },
+    "value": 1.0
+   },
+   {
+    "id": "5b5ad737d345f28be14e4504eba4a2b0",
+    "metric_name": "MaxValue(column=generacion)",
+    "config": {
+     "type": "evidently:metric_v2:MaxValue",
+     "column": "generacion"
+    },
+    "value": 12.0
+   },
+   {
+    "id": "e3f7df2a6db9aedeec80424138e387dc",
+    "metric_name": "MeanValue(column=generacion)",
+    "config": {
+     "type": "evidently:metric_v2:MeanValue",
+     "column": "generacion"
+    },
+    "value": 6.917525773195877
+   },
+   {
+    "id": "3073c9fd89a7f8e8d8728db66550dcf9",
+    "metric_name": "StdValue(column=generacion)",
+    "config": {
+     "type": "evidently:metric_v2:StdValue",
+     "column": "generacion"
+    },
+    "value": 3.6868922613425044
+   },
+   {
+    "id": "269d4b3c556fd4265ee9f9aa2b27bcd4",
+    "metric_name": "QuantileValue(column=generacion,quantile=0.25)",
+    "config": {
+     "type": "evidently:metric_v2:QuantileValue",
+     "column": "generacion",
+     "quantile": 0.25
+    },
+    "value": 4.0
+   },
+   {
+    "id": "7eb25c9d8954a24eb16470f6714b8c6a",
+    "metric_name": "QuantileValue(column=generacion,quantile=0.5)",
+    "config": {
+     "type": "evidently:metric_v2:QuantileValue",
+     "column": "generacion",
+     "quantile": 0.5
+    },
+    "value": 5.0
+   },
+   {
+    "id": "378f3b5e88cb1db743b1eadc74cb69a8",
+    "metric_name": "QuantileValue(column=generacion,quantile=0.75)",
+    "config": {
+     "type": "evidently:metric_v2:QuantileValue",
+     "column": "generacion",
+     "quantile": 0.75
+    },
+    "value": 10.0
+   },
+   {
+    "id": "e2c9cbc36538b9b033d2e70e347c6caf",
+    "metric_name": "MissingValueCount(column=gama)",
+    "config": {
+     "type": "evidently:metric_v2:MissingValueCount",
+     "column": "gama"
+    },
+    "value": {
+     "count": 700.0,
+     "share": 0.7063572149344097
+    }
+   },
+   {
+    "id": "c959a370cdb751d303c249b472a0e54e",
+    "metric_name": "MinValue(column=gama)",
+    "config": {
+     "type": "evidently:metric_v2:MinValue",
+     "column": "gama"
+    },
+    "value": 0.0
+   },
+   {
+    "id": "a1030ac8ea29c1dde21b99e5018a8b51",
+    "metric_name": "MaxValue(column=gama)",
+    "config": {
+     "type": "evidently:metric_v2:MaxValue",
+     "column": "gama"
+    },
+    "value": 0.995
+   },
+   {
+    "id": "3f1070c3afbb5598e32239153f9f75d3",
+    "metric_name": "MeanValue(column=gama)",
+    "config": {
+     "type": "evidently:metric_v2:MeanValue",
+     "column": "gama"
+    },
+    "value": 0.5514879725085912
+   },
+   {
+    "id": "7a0614308b4e82fe2b0fd94be0d19803",
+    "metric_name": "StdValue(column=gama)",
+    "config": {
+     "type": "evidently:metric_v2:StdValue",
+     "column": "gama"
+    },
+    "value": 0.27582739922854915
+   },
+   {
+    "id": "862cac0c0d652fa3fe83927b705e4436",
+    "metric_name": "QuantileValue(column=gama,quantile=0.25)",
+    "config": {
+     "type": "evidently:metric_v2:QuantileValue",
+     "column": "gama",
+     "quantile": 0.25
+    },
+    "value": 0.305
+   },
+   {
+    "id": "30f134c157f87298b992b3efc7083297",
+    "metric_name": "QuantileValue(column=gama,quantile=0.5)",
+    "config": {
+     "type": "evidently:metric_v2:QuantileValue",
+     "column": "gama",
+     "quantile": 0.5
+    },
+    "value": 0.6
+   },
+   {
+    "id": "2512807062573b3d05d4f90cf17038d3",
+    "metric_name": "QuantileValue(column=gama,quantile=0.75)",
+    "config": {
+     "type": "evidently:metric_v2:QuantileValue",
+     "column": "gama",
+     "quantile": 0.75
+    },
+    "value": 0.8
+   },
+   {
+    "id": "5e69b621543c28c1eb561ba6e9ad3c83",
+    "metric_name": "MissingValueCount(column=l3_mb)",
+    "config": {
+     "type": "evidently:metric_v2:MissingValueCount",
+     "column": "l3_mb"
+    },
+    "value": {
+     "count": 773.0,
+     "share": 0.7800201816347124
+    }
+   },
+   {
+    "id": "bc9a905391899e1fcc3f9d13ce0ac5a2",
+    "metric_name": "MinValue(column=l3_mb)",
+    "config": {
+     "type": "evidently:metric_v2:MinValue",
+     "column": "l3_mb"
+    },
+    "value": 1.5
+   },
+   {
+    "id": "0daba7c73d81afd21d990618605fff92",
+    "metric_name": "MaxValue(column=l3_mb)",
+    "config": {
+     "type": "evidently:metric_v2:MaxValue",
+     "column": "l3_mb"
+    },
+    "value": 256.0
+   },
+   {
+    "id": "af94723f614b08ecde88beba093ab793",
+    "metric_name": "MeanValue(column=l3_mb)",
+    "config": {
+     "type": "evidently:metric_v2:MeanValue",
+     "column": "l3_mb"
+    },
+    "value": 42.73050458715596
+   },
+   {
+    "id": "1ff3d0108d3f199c6564090fb070be96",
+    "metric_name": "StdValue(column=l3_mb)",
+    "config": {
+     "type": "evidently:metric_v2:StdValue",
+     "column": "l3_mb"
+    },
+    "value": 65.04754038303422
+   },
+   {
+    "id": "5a6f919d2f3c70837609a90dc81968c7",
+    "metric_name": "QuantileValue(column=l3_mb,quantile=0.25)",
+    "config": {
+     "type": "evidently:metric_v2:QuantileValue",
+     "column": "l3_mb",
+     "quantile": 0.25
+    },
+    "value": 12.0
+   },
+   {
+    "id": "1df8ec711a12d8fc424b4e8ef17cb0a9",
+    "metric_name": "QuantileValue(column=l3_mb,quantile=0.5)",
+    "config": {
+     "type": "evidently:metric_v2:QuantileValue",
+     "column": "l3_mb",
+     "quantile": 0.5
+    },
+    "value": 17.0
+   },
+   {
+    "id": "565661957a134760c605e99d770ec8a3",
+    "metric_name": "QuantileValue(column=l3_mb,quantile=0.75)",
+    "config": {
+     "type": "evidently:metric_v2:QuantileValue",
+     "column": "l3_mb",
+     "quantile": 0.75
+    },
+    "value": 32.0
+   },
+   {
+    "id": "9d3114102740370ff07a360207778195",
+    "metric_name": "MissingValueCount(column=proceso_nm)",
+    "config": {
+     "type": "evidently:metric_v2:MissingValueCount",
+     "column": "proceso_nm"
+    },
+    "value": {
+     "count": 770.0,
+     "share": 0.7769929364278506
+    }
+   },
+   {
+    "id": "0fa6083e327486d8c0a9fc42e0530dc6",
+    "metric_name": "MinValue(column=proceso_nm)",
+    "config": {
+     "type": "evidently:metric_v2:MinValue",
+     "column": "proceso_nm"
+    },
+    "value": 7.0
+   },
+   {
+    "id": "72df970dc7bc70a55de34369bb174b37",
+    "metric_name": "MaxValue(column=proceso_nm)",
+    "config": {
+     "type": "evidently:metric_v2:MaxValue",
+     "column": "proceso_nm"
+    },
+    "value": 45.0
+   },
+   {
+    "id": "7217f42ed52276cd550519fa681aa781",
+    "metric_name": "MeanValue(column=proceso_nm)",
+    "config": {
+     "type": "evidently:metric_v2:MeanValue",
+     "column": "proceso_nm"
+    },
+    "value": 10.701357466063348
+   },
+   {
+    "id": "c3d9ae1b0bae40fddec9963a6fce1f4c",
+    "metric_name": "StdValue(column=proceso_nm)",
+    "config": {
+     "type": "evidently:metric_v2:StdValue",
+     "column": "proceso_nm"
+    },
+    "value": 4.645765223571492
+   },
+   {
+    "id": "9589023092d199c9b337ef822d03d8f3",
+    "metric_name": "QuantileValue(column=proceso_nm,quantile=0.25)",
+    "config": {
+     "type": "evidently:metric_v2:QuantileValue",
+     "column": "proceso_nm",
+     "quantile": 0.25
+    },
+    "value": 7.0
+   },
+   {
+    "id": "b0929f58ea158bc6daed3943dd1d694d",
+    "metric_name": "QuantileValue(column=proceso_nm,quantile=0.5)",
+    "config": {
+     "type": "evidently:metric_v2:QuantileValue",
+     "column": "proceso_nm",
+     "quantile": 0.5
+    },
+    "value": 10.0
+   },
+   {
+    "id": "6b6078a7023acb4d5f92337b685b034c",
+    "metric_name": "QuantileValue(column=proceso_nm,quantile=0.75)",
+    "config": {
+     "type": "evidently:metric_v2:QuantileValue",
+     "column": "proceso_nm",
+     "quantile": 0.75
+    },
+    "value": 14.0
+   },
+   {
+    "id": "c1447ec43cc44e9609b7889e342ce868",
+    "metric_name": "MissingValueCount(column=base_ghz)",
+    "config": {
+     "type": "evidently:metric_v2:MissingValueCount",
+     "column": "base_ghz"
+    },
+    "value": {
+     "count": 573.0,
+     "share": 0.5782038345105953
+    }
+   },
+   {
+    "id": "098ae1157af83901220e59974871f7b8",
+    "metric_name": "MinValue(column=base_ghz)",
+    "config": {
+     "type": "evidently:metric_v2:MinValue",
+     "column": "base_ghz"
+    },
+    "value": 1.0
+   },
+   {
+    "id": "b1113114901f38f6657a7ea01c4d20c5",
+    "metric_name": "MaxValue(column=base_ghz)",
+    "config": {
+     "type": "evidently:metric_v2:MaxValue",
+     "column": "base_ghz"
+    },
+    "value": 4.3
+   },
+   {
+    "id": "5252b166ca7e00b5ee42154f9c07277a",
+    "metric_name": "MeanValue(column=base_ghz)",
+    "config": {
+     "type": "evidently:metric_v2:MeanValue",
+     "column": "base_ghz"
+    },
+    "value": 2.695406698564593
+   },
+   {
+    "id": "a8261d16d7b6c405eb847fea19045e3d",
+    "metric_name": "StdValue(column=base_ghz)",
+    "config": {
+     "type": "evidently:metric_v2:StdValue",
+     "column": "base_ghz"
+    },
+    "value": 0.7839150055192737
+   },
+   {
+    "id": "08e7aafabd24ad071744763351e0fd40",
+    "metric_name": "QuantileValue(column=base_ghz,quantile=0.25)",
+    "config": {
+     "type": "evidently:metric_v2:QuantileValue",
+     "column": "base_ghz",
+     "quantile": 0.25
+    },
+    "value": 2.1
+   },
+   {
+    "id": "198583be5a7b59c071c7ab6e10654a73",
+    "metric_name": "QuantileValue(column=base_ghz,quantile=0.5)",
+    "config": {
+     "type": "evidently:metric_v2:QuantileValue",
+     "column": "base_ghz",
+     "quantile": 0.5
+    },
+    "value": 2.7
+   },
+   {
+    "id": "dcc5d486544bd2ae81b5e54d588f5867",
+    "metric_name": "QuantileValue(column=base_ghz,quantile=0.75)",
+    "config": {
+     "type": "evidently:metric_v2:QuantileValue",
+     "column": "base_ghz",
+     "quantile": 0.75
+    },
+    "value": 3.3
+   },
+   {
+    "id": "6bd197452131b6dc76e98336b04eff29",
+    "metric_name": "MissingValueCount(column=turbo_ghz)",
+    "config": {
+     "type": "evidently:metric_v2:MissingValueCount",
+     "column": "turbo_ghz"
+    },
+    "value": {
+     "count": 774.0,
+     "share": 0.781029263370333
+    }
+   },
+   {
+    "id": "2519953f1e8d3176e367b4e7403b6c5d",
+    "metric_name": "MinValue(column=turbo_ghz)",
+    "config": {
+     "type": "evidently:metric_v2:MinValue",
+     "column": "turbo_ghz"
+    },
+    "value": 2.0
+   },
+   {
+    "id": "8e2657f89c7db0b313606ad688a929b9",
+    "metric_name": "MaxValue(column=turbo_ghz)",
+    "config": {
+     "type": "evidently:metric_v2:MaxValue",
+     "column": "turbo_ghz"
+    },
+    "value": 5.5
+   },
+   {
+    "id": "b09d098ef9716df19e0ae559b5c88ae0",
+    "metric_name": "MeanValue(column=turbo_ghz)",
+    "config": {
+     "type": "evidently:metric_v2:MeanValue",
+     "column": "turbo_ghz"
+    },
+    "value": 4.323041474654377
+   },
+   {
+    "id": "5b7edc60d6d0e0f68b4d3587c108cf5f",
+    "metric_name": "StdValue(column=turbo_ghz)",
+    "config": {
+     "type": "evidently:metric_v2:StdValue",
+     "column": "turbo_ghz"
+    },
+    "value": 0.6432647582433032
+   },
+   {
+    "id": "5191b0c521275a5731c1c60b57ce2f1d",
+    "metric_name": "QuantileValue(column=turbo_ghz,quantile=0.25)",
+    "config": {
+     "type": "evidently:metric_v2:QuantileValue",
+     "column": "turbo_ghz",
+     "quantile": 0.25
+    },
+    "value": 3.9
+   },
+   {
+    "id": "82c8c62b54c6a869f698f2e6513b0d98",
+    "metric_name": "QuantileValue(column=turbo_ghz,quantile=0.5)",
+    "config": {
+     "type": "evidently:metric_v2:QuantileValue",
+     "column": "turbo_ghz",
+     "quantile": 0.5
+    },
+    "value": 4.4
+   },
+   {
+    "id": "249fd2249f04c76dd99a959ca8713984",
+    "metric_name": "QuantileValue(column=turbo_ghz,quantile=0.75)",
+    "config": {
+     "type": "evidently:metric_v2:QuantileValue",
+     "column": "turbo_ghz",
+     "quantile": 0.75
+    },
+    "value": 4.8
+   },
+   {
+    "id": "69c2734495a7e5d6f9b778e6aac37516",
+    "metric_name": "MissingValueCount(column=hilos)",
+    "config": {
+     "type": "evidently:metric_v2:MissingValueCount",
+     "column": "hilos"
+    },
+    "value": {
+     "count": 911.0,
+     "share": 0.9192734611503531
+    }
+   },
+   {
+    "id": "fa1d7c04dd346ddb3718ef45bdb44e04",
+    "metric_name": "MinValue(column=hilos)",
+    "config": {
+     "type": "evidently:metric_v2:MinValue",
+     "column": "hilos"
+    },
+    "value": 2.0
+   },
+   {
+    "id": "12ea8d972731beee5a6cea1c92b3e81d",
+    "metric_name": "MaxValue(column=hilos)",
+    "config": {
+     "type": "evidently:metric_v2:MaxValue",
+     "column": "hilos"
+    },
+    "value": 128.0
+   },
+   {
+    "id": "2f85fd84ea194b8f42608b87a99305aa",
+    "metric_name": "MeanValue(column=hilos)",
+    "config": {
+     "type": "evidently:metric_v2:MeanValue",
+     "column": "hilos"
+    },
+    "value": 15.275
+   },
+   {
+    "id": "40307b8e998e3f2566893dbcd36faf05",
+    "metric_name": "StdValue(column=hilos)",
+    "config": {
+     "type": "evidently:metric_v2:StdValue",
+     "column": "hilos"
+    },
+    "value": 14.074822660033496
+   },
+   {
+    "id": "2f5b1bab3fffe1e48f0678a8d5c98864",
+    "metric_name": "QuantileValue(column=hilos,quantile=0.25)",
+    "config": {
+     "type": "evidently:metric_v2:QuantileValue",
+     "column": "hilos",
+     "quantile": 0.25
+    },
+    "value": 11.0
+   },
+   {
+    "id": "0365be9e0f08768937556121a7a4682d",
+    "metric_name": "QuantileValue(column=hilos,quantile=0.5)",
+    "config": {
+     "type": "evidently:metric_v2:QuantileValue",
+     "column": "hilos",
+     "quantile": 0.5
+    },
+    "value": 12.0
+   },
+   {
+    "id": "b20da4776b9b45eba43e20d394a5034c",
+    "metric_name": "QuantileValue(column=hilos,quantile=0.75)",
+    "config": {
+     "type": "evidently:metric_v2:QuantileValue",
+     "column": "hilos",
+     "quantile": 0.75
+    },
+    "value": 16.0
+   },
+   {
+    "id": "d1177510381fb934c386b8fd32b4dfcd",
+    "metric_name": "MissingValueCount(column=fabricante)",
+    "config": {
+     "type": "evidently:metric_v2:MissingValueCount",
+     "column": "fabricante"
+    },
+    "value": {
+     "count": 0.0,
+     "share": 0.0
+    }
+   },
+   {
+    "id": "7048f225faa2e46cd150b78da0f76676",
+    "metric_name": "UniqueValueCount(column=fabricante)",
+    "config": {
+     "type": "evidently:metric_v2:UniqueValueCount",
+     "column": "fabricante"
+    },
+    "value": {
+     "counts": {
+      "ARM": 59.0,
+      "Intel": 340.0,
+      "Hygon": 1.0,
+      "Apple": 14.0,
+      "MediaTek": 155.0,
+      "Otro": 66.0,
+      "Unisoc": 14.0,
+      "AMD": 175.0,
+      "HiSilicon": 23.0,
+      "VIA": 0.0,
+      "Qualcomm": 123.0,
+      "Samsung": 21.0
+     },
+     "shares": {
+      "ARM": 0.05953582240161453,
+      "Intel": 0.343087790110999,
+      "Hygon": 0.0010090817356205853,
+      "Apple": 0.014127144298688193,
+      "MediaTek": 0.15640766902119072,
+      "Otro": 0.06659939455095863,
+      "Unisoc": 0.014127144298688193,
+      "AMD": 0.17658930373360243,
+      "HiSilicon": 0.02320887991927346,
+      "VIA": 0.0,
+      "Qualcomm": 0.124117053481332,
+      "Samsung": 0.02119071644803229
+     }
+    }
+   },
+   {
+    "id": "347fe7693b1918e21d056190c59313d7",
+    "metric_name": "MissingValueCount(column=familia)",
+    "config": {
+     "type": "evidently:metric_v2:MissingValueCount",
+     "column": "familia"
+    },
+    "value": {
+     "count": 0.0,
+     "share": 0.0
+    }
+   },
+   {
+    "id": "780492e0a42c1c5fbdb44494fb4f8d93",
+    "metric_name": "UniqueValueCount(column=familia)",
+    "config": {
+     "type": "evidently:metric_v2:UniqueValueCount",
+     "column": "familia"
+    },
+    "value": {
+     "counts": {
+      "Otra": 411.0,
+      "ARM Cortex": 34.0,
+      "Core2": 13.0,
+      "Ryzen 9": 12.0,
+      "Snapdragon": 10.0,
+      "Apple": 14.0,
+      "Ryzen 7": 33.0,
+      "Opteron": 0.0,
+      "Core i3": 31.0,
+      "Core i5": 62.0,
+      "Core i7": 49.0,
+      "Threadripper": 11.0,
+      "Pentium": 28.0,
+      "Xeon": 104.0,
+      "Ryzen 3": 23.0,
+      "EPYC": 33.0,
+      "Ryzen otro": 8.0,
+      "Ryzen 5": 36.0,
+      "Phenom": 0.0,
+      "Athlon": 12.0,
+      "Celeron": 28.0,
+      "Atom": 9.0,
+      "Core i9": 30.0
+     },
+     "shares": {
+      "Otra": 0.4147325933400605,
+      "ARM Cortex": 0.034308779011099896,
+      "Core2": 0.013118062563067608,
+      "Ryzen 9": 0.012108980827447022,
+      "Snapdragon": 0.010090817356205853,
+      "Apple": 0.014127144298688193,
+      "Ryzen 7": 0.033299697275479316,
+      "Opteron": 0.0,
+      "Core i3": 0.03128153380423814,
+      "Core i5": 0.06256306760847628,
+      "Core i7": 0.04944500504540868,
+      "Threadripper": 0.011099899091826439,
+      "Pentium": 0.028254288597376387,
+      "Xeon": 0.10494450050454086,
+      "Ryzen 3": 0.02320887991927346,
+      "EPYC": 0.033299697275479316,
+      "Ryzen otro": 0.008072653884964682,
+      "Ryzen 5": 0.03632694248234107,
+      "Phenom": 0.0,
+      "Athlon": 0.012108980827447022,
+      "Celeron": 0.028254288597376387,
+      "Atom": 0.009081735620585268,
+      "Core i9": 0.030272452068617558
+     }
+    }
+   },
+   {
+    "id": "c5f95da9314f194d20a895e5edfd12ab",
+    "metric_name": "MissingValueCount(column=sufijo)",
+    "config": {
+     "type": "evidently:metric_v2:MissingValueCount",
+     "column": "sufijo"
+    },
+    "value": {
+     "count": 0.0,
+     "share": 0.0
+    }
+   },
+   {
+    "id": "43c9df088758af22efaea592d158e98c",
+    "metric_name": "UniqueValueCount(column=sufijo)",
+    "config": {
+     "type": "evidently:metric_v2:UniqueValueCount",
+     "column": "sufijo"
+    },
+    "value": {
+     "counts": {
+      "K": 22.0,
+      "B": 3.0,
+      "M": 0.0,
+      "Y": 4.0,
+      "F": 12.0,
+      "D": 0.0,
+      "T": 24.0,
+      "L": 0.0,
+      "C": 3.0,
+      "ninguno": 738.0,
+      "H": 52.0,
+      "N": 5.0,
+      "P": 4.0,
+      "R": 0.0,
+      "W": 9.0,
+      "E": 6.0,
+      "U": 43.0,
+      "Q": 0.0,
+      "G": 53.0,
+      "S": 1.0,
+      "X": 12.0
+     },
+     "shares": {
+      "K": 0.022199798183652877,
+      "B": 0.0030272452068617556,
+      "M": 0.0,
+      "Y": 0.004036326942482341,
+      "F": 0.012108980827447022,
+      "D": 0.0,
+      "T": 0.024217961654894045,
+      "L": 0.0,
+      "C": 0.0030272452068617556,
+      "ninguno": 0.7447023208879919,
+      "H": 0.05247225025227043,
+      "N": 0.005045408678102927,
+      "P": 0.004036326942482341,
+      "R": 0.0,
+      "W": 0.009081735620585268,
+      "E": 0.006054490413723511,
+      "U": 0.04339051463168517,
+      "Q": 0.0,
+      "G": 0.05348133198789102,
+      "S": 0.0010090817356205853,
+      "X": 0.012108980827447022
+     }
+    }
+   },
+   {
+    "id": "6273c26141e69efd55792f158f64e163",
+    "metric_name": "MissingValueCount(column=socket)",
+    "config": {
+     "type": "evidently:metric_v2:MissingValueCount",
+     "column": "socket"
+    },
+    "value": {
+     "count": 0.0,
+     "share": 0.0
+    }
+   },
+   {
+    "id": "c8cba1c26c3d3d00c8b4e20ae4d6868f",
+    "metric_name": "UniqueValueCount(column=socket)",
+    "config": {
+     "type": "evidently:metric_v2:UniqueValueCount",
+     "column": "socket"
+    },
+    "value": {
+     "counts": {
+      "FCBGA1364": 1.0,
+      "PGA988B": 0.0,
+      "LGA1567": 0.0,
+      "FP2": 0.0,
+      "BGA827 (FP2)": 0.0,
+      "940": 0.0,
+      "LGA775": 0.0,
+      "FCLGA4189": 22.0,
+      "BGA1140": 1.0,
+      "FCLGA3647": 26.0,
+      "BGA1288": 0.0,
+      "FCBGA1234": 0.0,
+      "FS1 uPGA": 0.0,
+      "FS1r2": 0.0,
+      "BGA1380": 0.0,
+      "FP7": 5.0,
+      "FCLGA1155": 1.0,
+      "FCPGA988, FCBGA1": 0.0,
+      "FCLGA-3647": 0.0,
+      "BGA479,PGA478": 0.0,
+      "FCBGA1440": 17.0,
+      "FCBGA1168": 0.0,
+      "BGA2270": 0.0,
+      "LGA1156": 0.0,
+      "BGA-1023": 0.0,
+      "LGA 1700": 6.0,
+      "Socket S1 (S1g1)": 0.0,
+      "PPGA603": 0.0,
+      "FCLGA1700": 17.0,
+      "BGA1023": 0.0,
+      "G34": 0.0,
+      "mPGA604": 0.0,
+      "FS1": 0.0,
+      "rPGA988": 0.0,
+      "FCLGA2066": 9.0,
+      "FCBGA1023, FCP": 0.0,
+      "FCBGA1023, PPG": 0.0,
+      "Socket G34": 0.0,
+      "LGA2011-v3": 1.0,
+      "FCPGA946": 0.0,
+      "PPGA604": 0.0,
+      "PGA988A": 0.0,
+      "LGA3647": 1.0,
+      "LGA 1356": 0.0,
+      "LGA771": 0.0,
+      "rPGA988B": 0.0,
+      "BGA1296": 0.0,
+      "BGA1224": 0.0,
+      "FCLGA1156": 0.0,
+      "FCBGA2518": 2.0,
+      "PPGA478, Socket": 0.0,
+      "FT3 (769-BGA)": 0.0,
+      "FCBGA2579": 1.0,
+      "UTFCBGA1377": 3.0,
+      "FCBGA1515": 1.0,
+      "LGA775, PLGA775": 0.0,
+      "FCBGA1598": 4.0,
+      "FCLGA1151": 5.0,
+      "BGA2, microPGA2": 0.0,
+      "FCBGA1744": 8.0,
+      "Socket 370": 0.0,
+      "BGA 1449": 2.0,
+      "FCBGA1338": 8.0,
+      "FP4 BGA": 0.0,
+      "LGA 1151": 1.0,
+      "FCLGA1150": 0.0,
+      "PGA988": 0.0,
+      "SP4r2": 0.0,
+      "LGA1356": 0.0,
+      "604": 0.0,
+      "FCBGA1023": 0.0,
+      "sTR4": 1.0,
+      "LGA1366": 0.0,
+      "AM2+,AM3": 0.0,
+      "AM3+": 0.0,
+      "BGA 1283": 0.0,
+      "AM1,FS1B": 0.0,
+      "AM1,FT3b": 0.0,
+      "FCBGA1667": 4.0,
+      "PLGA775": 0.0,
+      "LGA1700,BGA1700": 2.0,
+      "AM1,FSB1": 0.0,
+      "FCBGA2227": 1.0,
+      "LGA2011": 0.0,
+      "BGA (FP4)": 0.0,
+      "FCBGA1449": 17.0,
+      "AM2+": 0.0,
+      "FCBGA1356": 0.0,
+      "PGA946": 0.0,
+      "LGA1155, FCLGA11": 0.0,
+      "S1": 1.0,
+      "FTB3b": 0.0,
+      "FCLGA-2066": 0.0,
+      "PGA988B, FCBGA12": 0.0,
+      "LGA1155": 0.0,
+      "FCBGA1310": 2.0,
+      "FC-CSP1016": 1.0,
+      "LGA1151": 0.0,
+      "FT1 BGA": 0.0,
+      "BGA (FT4)": 0.0,
+      "FCBGA1090": 7.0,
+      "BGA1234": 0.0,
+      "rPGA946B": 0.0,
+      "BGA479": 0.0,
+      "BGA 1667": 0.0,
+      "BGA812": 0.0,
+      "FCBGA1787": 12.0,
+      "FT3": 0.0,
+      "FCBGA1344": 2.0,
+      "UTFCBGA592": 0.0,
+      "FT4": 0.0,
+      "Socket A": 0.0,
+      "FPGA946,FPGA947": 0.0,
+      "FCLGA2011-3": 4.0,
+      "BGA1700": 5.0,
+      "FP6": 41.0,
+      "sWRX8": 9.0,
+      "unknown": 504.0,
+      "BGA769 (FT3b)": 0.0,
+      "BGA1440": 0.0,
+      "PGA604": 0.0,
+      "PBGA479": 0.0,
+      "Socket A (462)": 0.0,
+      "FCBGA-1526": 0.0,
+      "BGA437": 0.0,
+      "PGA478": 0.0,
+      "AM2": 0.0,
+      "\u03bcFCPGA-478": 0.0,
+      "BGA769 (FT3)": 0.0,
+      "Socket P": 0.0,
+      "F (1207)": 0.0,
+      "BGA": 0.0,
+      "FCBGA1526": 2.0,
+      "FM1": 0.0,
+      "LGA 2011": 0.0,
+      "FMA4": 0.0,
+      "BGA956": 0.0,
+      "FCLGA1151-2": 5.0,
+      "FCLGA1356": 0.0,
+      "sTRX4": 1.0,
+      "LGA2011-1": 0.0,
+      "754": 0.0,
+      "Socket C32": 0.0,
+      "H-PBGA479, PPG": 0.0,
+      "FCLGA1200": 97.0,
+      "BGA441": 0.0,
+      "LGA1150": 1.0,
+      "FCBGA1170": 1.0,
+      "939": 0.0,
+      "FT1": 0.0,
+      "AM2+ (940-pin)": 0.0,
+      "BGA 1528": 1.0,
+      "FCBGA1528": 12.0,
+      "FM2+": 0.0,
+      "FCBGA1296": 2.0,
+      "PPGA478, H-PBGA4": 0.0,
+      "FM2": 1.0,
+      "PBGA479, PPGA478": 0.0,
+      "LGA2066": 1.0,
+      "FP3": 1.0,
+      "S1g4": 0.0,
+      "LGA4189": 1.0,
+      "BGA518": 0.0,
+      "BGA1744": 1.0,
+      "BGA1168": 0.0,
+      "PPGA478": 0.0,
+      "FCBGA1283": 1.0,
+      "PGA423": 0.0,
+      "FC-MB4760": 0.0,
+      "FT3b": 0.0,
+      "ASB1": 0.0,
+      "C32": 0.0,
+      "AM2+ (938-pin)": 0.0,
+      "FP5": 9.0,
+      "AM2/AM2+": 0.0,
+      "FCBGA1493": 8.0,
+      "FT5": 1.0,
+      "BGA1364": 0.0,
+      "BGA559": 0.0,
+      "H-PBGA479, PPGA4": 0.0,
+      "FCLGA2011": 0.0,
+      "AM4": 53.0,
+      "BGA400": 0.0,
+      "UTFCBGA1380": 0.0,
+      "FC-BGA1356": 0.0,
+      "rPGA988A": 0.0,
+      "AM3": 1.0,
+      "BGA1526": 5.0,
+      "SP3": 29.0,
+      "AM2,AM2+": 0.0,
+      "LGA 3647": 1.0,
+      "FP4": 0.0,
+      "AM2+/AM3": 0.0,
+      "BGA1170": 0.0,
+      "FCPGA988": 0.0,
+      "Socket 754": 0.0,
+      "NanoBGA2": 0.0,
+      "TR4": 0.0,
+      "AM1": 1.0,
+      "Socket M": 0.0,
+      "BGA413,FT1": 0.0,
+      "AM1,FS1b": 0.0,
+      "BGA1356": 0.0
+     },
+     "shares": {
+      "FCBGA1364": 0.0010090817356205853,
+      "PGA988B": 0.0,
+      "LGA1567": 0.0,
+      "FP2": 0.0,
+      "BGA827 (FP2)": 0.0,
+      "940": 0.0,
+      "LGA775": 0.0,
+      "FCLGA4189": 0.022199798183652877,
+      "BGA1140": 0.0010090817356205853,
+      "FCLGA3647": 0.026236125126135216,
+      "BGA1288": 0.0,
+      "FCBGA1234": 0.0,
+      "FS1 uPGA": 0.0,
+      "FS1r2": 0.0,
+      "BGA1380": 0.0,
+      "FP7": 0.005045408678102927,
+      "FCLGA1155": 0.0010090817356205853,
+      "FCPGA988, FCBGA1": 0.0,
+      "FCLGA-3647": 0.0,
+      "BGA479,PGA478": 0.0,
+      "FCBGA1440": 0.017154389505549948,
+      "FCBGA1168": 0.0,
+      "BGA2270": 0.0,
+      "LGA1156": 0.0,
+      "BGA-1023": 0.0,
+      "LGA 1700": 0.006054490413723511,
+      "Socket S1 (S1g1)": 0.0,
+      "PPGA603": 0.0,
+      "FCLGA1700": 0.017154389505549948,
+      "BGA1023": 0.0,
+      "G34": 0.0,
+      "mPGA604": 0.0,
+      "FS1": 0.0,
+      "rPGA988": 0.0,
+      "FCLGA2066": 0.009081735620585268,
+      "FCBGA1023, FCP": 0.0,
+      "FCBGA1023, PPG": 0.0,
+      "Socket G34": 0.0,
+      "LGA2011-v3": 0.0010090817356205853,
+      "FCPGA946": 0.0,
+      "PPGA604": 0.0,
+      "PGA988A": 0.0,
+      "LGA3647": 0.0010090817356205853,
+      "LGA 1356": 0.0,
+      "LGA771": 0.0,
+      "rPGA988B": 0.0,
+      "BGA1296": 0.0,
+      "BGA1224": 0.0,
+      "FCLGA1156": 0.0,
+      "FCBGA2518": 0.0020181634712411706,
+      "PPGA478, Socket": 0.0,
+      "FT3 (769-BGA)": 0.0,
+      "FCBGA2579": 0.0010090817356205853,
+      "UTFCBGA1377": 0.0030272452068617556,
+      "FCBGA1515": 0.0010090817356205853,
+      "LGA775, PLGA775": 0.0,
+      "FCBGA1598": 0.004036326942482341,
+      "FCLGA1151": 0.005045408678102927,
+      "BGA2, microPGA2": 0.0,
+      "FCBGA1744": 0.008072653884964682,
+      "Socket 370": 0.0,
+      "BGA 1449": 0.0020181634712411706,
+      "FCBGA1338": 0.008072653884964682,
+      "FP4 BGA": 0.0,
+      "LGA 1151": 0.0010090817356205853,
+      "FCLGA1150": 0.0,
+      "PGA988": 0.0,
+      "SP4r2": 0.0,
+      "LGA1356": 0.0,
+      "604": 0.0,
+      "FCBGA1023": 0.0,
+      "sTR4": 0.0010090817356205853,
+      "LGA1366": 0.0,
+      "AM2+,AM3": 0.0,
+      "AM3+": 0.0,
+      "BGA 1283": 0.0,
+      "AM1,FS1B": 0.0,
+      "AM1,FT3b": 0.0,
+      "FCBGA1667": 0.004036326942482341,
+      "PLGA775": 0.0,
+      "LGA1700,BGA1700": 0.0020181634712411706,
+      "AM1,FSB1": 0.0,
+      "FCBGA2227": 0.0010090817356205853,
+      "LGA2011": 0.0,
+      "BGA (FP4)": 0.0,
+      "FCBGA1449": 0.017154389505549948,
+      "AM2+": 0.0,
+      "FCBGA1356": 0.0,
+      "PGA946": 0.0,
+      "LGA1155, FCLGA11": 0.0,
+      "S1": 0.0010090817356205853,
+      "FTB3b": 0.0,
+      "FCLGA-2066": 0.0,
+      "PGA988B, FCBGA12": 0.0,
+      "LGA1155": 0.0,
+      "FCBGA1310": 0.0020181634712411706,
+      "FC-CSP1016": 0.0010090817356205853,
+      "LGA1151": 0.0,
+      "FT1 BGA": 0.0,
+      "BGA (FT4)": 0.0,
+      "FCBGA1090": 0.007063572149344097,
+      "BGA1234": 0.0,
+      "rPGA946B": 0.0,
+      "BGA479": 0.0,
+      "BGA 1667": 0.0,
+      "BGA812": 0.0,
+      "FCBGA1787": 0.012108980827447022,
+      "FT3": 0.0,
+      "FCBGA1344": 0.0020181634712411706,
+      "UTFCBGA592": 0.0,
+      "FT4": 0.0,
+      "Socket A": 0.0,
+      "FPGA946,FPGA947": 0.0,
+      "FCLGA2011-3": 0.004036326942482341,
+      "BGA1700": 0.005045408678102927,
+      "FP6": 0.04137235116044399,
+      "sWRX8": 0.009081735620585268,
+      "unknown": 0.508577194752775,
+      "BGA769 (FT3b)": 0.0,
+      "BGA1440": 0.0,
+      "PGA604": 0.0,
+      "PBGA479": 0.0,
+      "Socket A (462)": 0.0,
+      "FCBGA-1526": 0.0,
+      "BGA437": 0.0,
+      "PGA478": 0.0,
+      "AM2": 0.0,
+      "\u03bcFCPGA-478": 0.0,
+      "BGA769 (FT3)": 0.0,
+      "Socket P": 0.0,
+      "F (1207)": 0.0,
+      "BGA": 0.0,
+      "FCBGA1526": 0.0020181634712411706,
+      "FM1": 0.0,
+      "LGA 2011": 0.0,
+      "FMA4": 0.0,
+      "BGA956": 0.0,
+      "FCLGA1151-2": 0.005045408678102927,
+      "FCLGA1356": 0.0,
+      "sTRX4": 0.0010090817356205853,
+      "LGA2011-1": 0.0,
+      "754": 0.0,
+      "Socket C32": 0.0,
+      "H-PBGA479, PPG": 0.0,
+      "FCLGA1200": 0.09788092835519677,
+      "BGA441": 0.0,
+      "LGA1150": 0.0010090817356205853,
+      "FCBGA1170": 0.0010090817356205853,
+      "939": 0.0,
+      "FT1": 0.0,
+      "AM2+ (940-pin)": 0.0,
+      "BGA 1528": 0.0010090817356205853,
+      "FCBGA1528": 0.012108980827447022,
+      "FM2+": 0.0,
+      "FCBGA1296": 0.0020181634712411706,
+      "PPGA478, H-PBGA4": 0.0,
+      "FM2": 0.0010090817356205853,
+      "PBGA479, PPGA478": 0.0,
+      "LGA2066": 0.0010090817356205853,
+      "FP3": 0.0010090817356205853,
+      "S1g4": 0.0,
+      "LGA4189": 0.0010090817356205853,
+      "BGA518": 0.0,
+      "BGA1744": 0.0010090817356205853,
+      "BGA1168": 0.0,
+      "PPGA478": 0.0,
+      "FCBGA1283": 0.0010090817356205853,
+      "PGA423": 0.0,
+      "FC-MB4760": 0.0,
+      "FT3b": 0.0,
+      "ASB1": 0.0,
+      "C32": 0.0,
+      "AM2+ (938-pin)": 0.0,
+      "FP5": 0.009081735620585268,
+      "AM2/AM2+": 0.0,
+      "FCBGA1493": 0.008072653884964682,
+      "FT5": 0.0010090817356205853,
+      "BGA1364": 0.0,
+      "BGA559": 0.0,
+      "H-PBGA479, PPGA4": 0.0,
+      "FCLGA2011": 0.0,
+      "AM4": 0.05348133198789102,
+      "BGA400": 0.0,
+      "UTFCBGA1380": 0.0,
+      "FC-BGA1356": 0.0,
+      "rPGA988A": 0.0,
+      "AM3": 0.0010090817356205853,
+      "BGA1526": 0.005045408678102927,
+      "SP3": 0.029263370332996974,
+      "AM2,AM2+": 0.0,
+      "LGA 3647": 0.0010090817356205853,
+      "FP4": 0.0,
+      "AM2+/AM3": 0.0,
+      "BGA1170": 0.0,
+      "FCPGA988": 0.0,
+      "Socket 754": 0.0,
+      "NanoBGA2": 0.0,
+      "TR4": 0.0,
+      "AM1": 0.0010090817356205853,
+      "Socket M": 0.0,
+      "BGA413,FT1": 0.0,
+      "AM1,FS1b": 0.0,
+      "BGA1356": 0.0
+     }
+    }
+   },
+   {
+    "id": "194ad277715d8d10e87e4ee2164cb238",
+    "metric_name": "MissingValueCount(column=es_desktop)",
+    "config": {
+     "type": "evidently:metric_v2:MissingValueCount",
+     "column": "es_desktop"
+    },
+    "value": {
+     "count": 0.0,
+     "share": 0.0
+    }
+   },
+   {
+    "id": "81b2da9e00b00e0e2888bc9c038fc0bd",
+    "metric_name": "UniqueValueCount(column=es_desktop)",
+    "config": {
+     "type": "evidently:metric_v2:UniqueValueCount",
+     "column": "es_desktop"
+    },
+    "value": {
+     "counts": {
+      "0": 794.0,
+      "1": 197.0
+     },
+     "shares": {
+      "0": 0.8012108980827447,
+      "1": 0.1987891019172553
+     }
+    }
+   },
+   {
+    "id": "68dccbeabe3b7155965d00e578716d8d",
+    "metric_name": "MissingValueCount(column=es_laptop)",
+    "config": {
+     "type": "evidently:metric_v2:MissingValueCount",
+     "column": "es_laptop"
+    },
+    "value": {
+     "count": 0.0,
+     "share": 0.0
+    }
+   },
+   {
+    "id": "f8b2e916cda390ff963a852be9e5f484",
+    "metric_name": "UniqueValueCount(column=es_laptop)",
+    "config": {
+     "type": "evidently:metric_v2:UniqueValueCount",
+     "column": "es_laptop"
+    },
+    "value": {
+     "counts": {
+      "0": 831.0,
+      "1": 160.0
+     },
+     "shares": {
+      "0": 0.8385469223007064,
+      "1": 0.16145307769929365
+     }
+    }
+   },
+   {
+    "id": "0365e93d47ca3d9040d3899bb037ad36",
+    "metric_name": "MissingValueCount(column=es_server)",
+    "config": {
+     "type": "evidently:metric_v2:MissingValueCount",
+     "column": "es_server"
+    },
+    "value": {
+     "count": 0.0,
+     "share": 0.0
+    }
+   },
+   {
+    "id": "8ba3e6880c402bddcc745f0aa4a55959",
+    "metric_name": "UniqueValueCount(column=es_server)",
+    "config": {
+     "type": "evidently:metric_v2:UniqueValueCount",
+     "column": "es_server"
+    },
+    "value": {
+     "counts": {
+      "0": 851.0,
+      "1": 140.0
+     },
+     "shares": {
+      "0": 0.858728557013118,
+      "1": 0.14127144298688193
+     }
+    }
+   },
+   {
+    "id": "b2af91fa76f4a09eddef41cfb795ed0d",
+    "metric_name": "MissingValueCount(column=es_mobile)",
+    "config": {
+     "type": "evidently:metric_v2:MissingValueCount",
+     "column": "es_mobile"
+    },
+    "value": {
+     "count": 0.0,
+     "share": 0.0
+    }
+   },
+   {
+    "id": "e2f7d2bf985a4f513531c925d949f452",
+    "metric_name": "UniqueValueCount(column=es_mobile)",
+    "config": {
+     "type": "evidently:metric_v2:UniqueValueCount",
+     "column": "es_mobile"
+    },
+    "value": {
+     "counts": {
+      "0": 547.0,
+      "1": 444.0
+     },
+     "shares": {
+      "0": 0.5519677093844602,
+      "1": 0.44803229061553984
+     }
+    }
+   }
+  ],
+  "tests": []
+ },
+ "modelo": {
+  "metrics": [
+   {
+    "id": "eb50f621dc9ac96982148a761b11eaa7",
+    "metric_name": "MeanError(regression_name=default,error_plot=True,error_distr=False,error_normality=False)",
+    "config": {
+     "type": "evidently:metric_v2:MeanError",
+     "regression_name": "default",
+     "error_plot": true,
+     "error_distr": false,
+     "error_normality": false
+    },
+    "value": {
+     "mean": 0.34297299354724525,
+     "std": 0.8056761007918617
+    }
+   },
+   {
+    "id": "5aa32fd1e3c5da1cd47cbc5f7ab4372d",
+    "metric_name": "MAPE(regression_name=default,perc_error_plot=True,error_distr=False)",
+    "config": {
+     "type": "evidently:metric_v2:MAPE",
+     "regression_name": "default",
+     "perc_error_plot": true,
+     "error_distr": false
+    },
+    "value": {
+     "mean": 9.021498470387499,
+     "std": 0.09485986176243864
+    }
+   },
+   {
+    "id": "07a6d46c093f8fd4d3fd9a8f834e0446",
+    "metric_name": "RMSE(regression_name=default,error_plot=False,error_distr=True,error_normality=False)",
+    "config": {
+     "type": "evidently:metric_v2:RMSE",
+     "regression_name": "default",
+     "error_plot": false,
+     "error_distr": true,
+     "error_normality": false
+    },
+    "value": 0.8752653566941863
+   },
+   {
+    "id": "388a1f90d7785053ba4b44301e310cf2",
+    "metric_name": "MAE(regression_name=default,error_plot=False,error_distr=True,error_normality=False)",
+    "config": {
+     "type": "evidently:metric_v2:MAE",
+     "regression_name": "default",
+     "error_plot": false,
+     "error_distr": true,
+     "error_normality": false
+    },
+    "value": {
+     "mean": 0.653589612576889,
+     "std": 0.5824537718630752
+    }
+   },
+   {
+    "id": "9c7e7b78ceb0ed9bc65fd16a8cca6237",
+    "metric_name": "R2Score(regression_name=default,error_distr=False,error_normality=False)",
+    "config": {
+     "type": "evidently:metric_v2:R2Score",
+     "regression_name": "default",
+     "error_distr": false,
+     "error_normality": false
+    },
+    "value": 0.6342085350934332
+   },
+   {
+    "id": "d2ac9457e6d5eacc29f1a47de21d9d45",
+    "metric_name": "AbsMaxError(regression_name=default,error_distr=False,error_normality=False)",
+    "config": {
+     "type": "evidently:metric_v2:AbsMaxError",
+     "regression_name": "default",
+     "error_distr": false,
+     "error_normality": false
+    },
+    "value": 2.8420010011442143
+   },
+   {
+    "id": "1352cb4142f93b1658c62294ff639ae6",
+    "metric_name": "DriftedColumnsCount(columns=log_cpuMark,drift_share=0.5)",
+    "config": {
+     "type": "evidently:metric_v2:DriftedColumnsCount",
+     "columns": [
+      "log_cpuMark"
+     ],
+     "drift_share": 0.5
+    },
+    "value": {
+     "count": 1.0,
+     "share": 1.0
+    }
+   },
+   {
+    "id": "5c906aa74dbc6364f5f3be3f75fc1147",
+    "metric_name": "ValueDrift(column=log_cpuMark,method=Wasserstein distance (normed),threshold=0.1)",
+    "config": {
+     "type": "evidently:metric_v2:ValueDrift",
+     "column": "log_cpuMark",
+     "method": "Wasserstein distance (normed)",
+     "threshold": 0.1
+    },
+    "value": 0.6462326800854354
+   }
+  ],
+  "tests": []
+ }
+}
