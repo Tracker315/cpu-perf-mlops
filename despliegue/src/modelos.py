@@ -10,14 +10,17 @@ from sklearn.model_selection import KFold
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.neural_network import MLPRegressor
 from sklearn.pipeline import make_pipeline
-from sklearn.preprocessing import FunctionTransformer, OneHotEncoder, PolynomialFeatures, StandardScaler, TargetEncoder
+from sklearn.preprocessing import FunctionTransformer, OneHotEncoder, StandardScaler
 
 from .config import SEMILLA
 
-NUMERICAS = ["cores", "TDP", "anio", "ghz_nombre", "generacion", "gama"]
-CATEGORICAS = ["fabricante", "familia", "sufijo"]
-ALTA_CARDINALIDAD = ["socket"]       # 200+ valores: target encoding en vez de one-hot
-BANDERAS = ["es_desktop", "es_laptop", "es_server", "es_mobile"]
+# Columnas que entran al modelo, agrupadas por como se preparan (ver preprocesamiento)
+NUMERICAS = ["cores", "TDP", "anio", "ghz_nombre", "generacion", "gama"]   # cores y TDP primero: log_cores_tdp usa su posicion
+EXTERNAS = ["l3_mb", "proceso_nm", "base_ghz", "turbo_ghz", "hilos"]        # TechPowerUp / pc_build: se suman a las numericas
+# one-hot; las categorias con menos de 10 CPUs van juntas en "otros" (importa sobre todo en socket, con 200+ valores).
+# Para socket se probo target encoding en E3 y gano one-hot (807 vs 827)
+CATEGORICAS = ["fabricante", "familia", "sufijo", "socket"]
+BANDERAS = ["es_desktop", "es_laptop", "es_server", "es_mobile"]          # ya son 0/1: pasan tal cual
 
 
 def log_cores_tdp(X):
@@ -28,10 +31,6 @@ def log_cores_tdp(X):
     return X
 
 
-EXTERNAS = ["l3_mb", "proceso_nm", "base_ghz", "turbo_ghz", "hilos"]
-EXTRA_NUMERICAS = []     # transfer learning: columnas extra (pista de otro modelo, indicador de fuente); vacio = normal
-
-
 def usar_externos(si=True):
     """Agrega o quita las columnas de los datos externos en la parte numerica del preprocesamiento."""
     global NUMERICAS
@@ -39,20 +38,16 @@ def usar_externos(si=True):
     NUMERICAS = base + EXTERNAS if si else base
 
 
-def preprocesamiento(polinomio=0, externos=None):
+def preprocesamiento(externos=None):
     """externos=None usa lo que diga usar_externos(); True/False lo fija (necesario en procesos paralelos, donde el
     valor global no se hereda)."""
     numericas = NUMERICAS if externos is None else [c for c in NUMERICAS if c not in EXTERNAS] + (EXTERNAS if externos else [])
-    numericas = list(numericas) + [c for c in EXTRA_NUMERICAS if c not in numericas]
     pasos_num = [SimpleImputer(strategy="median", add_indicator=True),   # el indicador avisa si TDP o ghz faltaban
-                 FunctionTransformer(log_cores_tdp, feature_names_out="one-to-one")]
-    if polinomio:
-        pasos_num.append(PolynomialFeatures(degree=polinomio, include_bias=False))
-    pasos_num.append(StandardScaler())
+                 FunctionTransformer(log_cores_tdp, feature_names_out="one-to-one"),
+                 StandardScaler()]
     return ColumnTransformer([
         ("num", make_pipeline(*pasos_num), numericas),
         ("cat", OneHotEncoder(handle_unknown="ignore", min_frequency=10), CATEGORICAS),
-        ("socket", OneHotEncoder(handle_unknown="ignore", min_frequency=10), ALTA_CARDINALIDAD),   # E3: gano a target encoding
         ("banderas", "passthrough", BANDERAS),
     ], sparse_threshold=0)        # siempre matriz normal (HGB no acepta dispersa)
 
@@ -187,8 +182,6 @@ def catalogo():
     """nombre -> (familia, modelo sin entrenar, rejilla para GridSearch). Los nombres de parametros llevan regressor__."""
     return {
         "lineal": ("lineal", con_log(make_pipeline(preprocesamiento(), LinearRegression())), {}),
-        "polinomial": ("lineal", con_log(make_pipeline(preprocesamiento(polinomio=2), Ridge(alpha=1.0))),
-                       {"regressor__ridge__alpha": [0.1, 1.0, 10.0]}),
         "ridge": ("lineal", con_log(make_pipeline(preprocesamiento(), Ridge())),
                   {"regressor__ridge__alpha": [0.01, 0.1, 1.0, 10.0, 100.0]}),
         "lasso": ("lineal", con_log(make_pipeline(preprocesamiento(), Lasso(max_iter=5000))),

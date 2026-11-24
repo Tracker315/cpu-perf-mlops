@@ -30,6 +30,11 @@ RUIDO_2 = [r"\b\d+(\.\d+)?\s*m\s*cache.*$", r"\bup to\b.*$", r"\b\d+\s*nm\b", r"
 
 
 def normalizar(nombre):
+    """Clave unica del procesador para unir fuentes que lo escriben distinto. Ejemplo (el mismo CPU en 3 fuentes):
+        "Intel Core i9-12900K"                         (PassMark)  -> "core i9 12900k"
+        "12th Gen Intel(R) Core(TM) i9-12900K"         (Blender)   -> "core i9 12900k"
+        "Intel Core i9 12900K 3.2 GHz 16-Core LGA1700" (pc_build)  -> "core i9 12900k"
+    """
     n = str(nombre).lower()
     for patron in RUIDO:
         n = re.sub(patron, " ", n)

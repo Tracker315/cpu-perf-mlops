@@ -39,7 +39,7 @@ def envuelto(est, acotar=False):
     return modelos.con_log(modelos.ConPesos(est, acotar=acotar))
 
 
-def p(paso, d):
+def p(d):
     """Prefijo de los nombres de parametros dentro de con_log(ConPesos(modelo))."""
     return {f"regressor__modelo__{k}": v for k, v in d.items()}
 
@@ -49,26 +49,26 @@ def familias():
     v = {"regressor__vida_media": VIDAS, "regressor__externos": [True, False]}
     e = {"regressor__externos": [True, False]}
     return {
-        "ridge": (envuelto(Ridge()), {**p("ridge", {"alpha": loguniform(1e-2, 1e3)}), **v}, 25),
+        "ridge": (envuelto(Ridge()), {**p({"alpha": loguniform(1e-2, 1e3)}), **v}, 25),
         "elasticnet": (envuelto(ElasticNet(max_iter=20000)),
-                       {**p("elasticnet", {"alpha": loguniform(1e-4, 1), "l1_ratio": uniform(0.05, 0.95)}), **v}, 25),
+                       {**p({"alpha": loguniform(1e-4, 1), "l1_ratio": uniform(0.05, 0.95)}), **v}, 25),
         "knn": (envuelto(KNeighborsRegressor()),
-                {**p("kneighborsregressor", {"n_neighbors": randint(2, 40), "weights": ["uniform", "distance"], "p": [1, 2]}), **e}, 25),
+                {**p({"n_neighbors": randint(2, 40), "weights": ["uniform", "distance"], "p": [1, 2]}), **e}, 25),
         "svr": (envuelto(SVR()),
-                {**p("svr", {"C": loguniform(0.1, 300), "epsilon": loguniform(0.005, 0.5), "gamma": loguniform(1e-3, 1)}), **v,
+                {**p({"C": loguniform(0.1, 300), "epsilon": loguniform(0.005, 0.5), "gamma": loguniform(1e-3, 1)}), **v,
                  "regressor__acotar": [True, False]}, 30),
         "random_forest": (envuelto(RandomForestRegressor(random_state=S, n_jobs=1)),
-                          {**p("randomforestregressor", {"n_estimators": [100, 200, 400], "min_samples_leaf": randint(1, 12),
+                          {**p({"n_estimators": [100, 200, 400], "min_samples_leaf": randint(1, 12),
                                                          "max_features": [0.2, 0.33, 0.5, 0.7, 1.0], "max_depth": [None, 8, 15, 25]}), **v}, 30),
         "extra_trees": (envuelto(ExtraTreesRegressor(random_state=S, n_jobs=1)),
-                        {**p("extratreesregressor", {"n_estimators": [100, 200, 400], "min_samples_leaf": randint(1, 12),
+                        {**p({"n_estimators": [100, 200, 400], "min_samples_leaf": randint(1, 12),
                                                      "max_features": [0.2, 0.33, 0.5, 0.7, 1.0], "max_depth": [None, 8, 15, 25]}), **v}, 30),
         "hgb": (envuelto(HistGradientBoostingRegressor(random_state=S)),
-                {**p("histgradientboostingregressor", {"learning_rate": loguniform(0.01, 0.3), "max_iter": [100, 200, 400, 800],
+                {**p({"learning_rate": loguniform(0.01, 0.3), "max_iter": [100, 200, 400, 800],
                                                        "max_leaf_nodes": randint(4, 64), "min_samples_leaf": randint(3, 80),
                                                        "l2_regularization": loguniform(1e-3, 30), "max_features": [0.3, 0.5, 0.8, 1.0]}), **v}, 40),
         "mlp": (envuelto(MLPRegressor(early_stopping=True, n_iter_no_change=20, max_iter=2000, random_state=S)),
-                {**p("mlpregressor", {"hidden_layer_sizes": [(16,), (32,), (64,), (128,), (32, 16), (64, 32), (128, 64), (128, 64, 32)],
+                {**p({"hidden_layer_sizes": [(16,), (32,), (64,), (128,), (32, 16), (64, 32), (128, 64), (128, 64, 32)],
                                       "activation": ["relu", "tanh"], "alpha": loguniform(1e-3, 30),
                                       "learning_rate_init": loguniform(3e-4, 1e-2)}), **v, "regressor__acotar": [True, False]}, 40),
         "hibrido_bosque": (modelos.con_log(modelos.Hibrido()),

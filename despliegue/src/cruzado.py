@@ -242,7 +242,7 @@ def paso3_b(b, Xb):
     return mejor, res
 
 
-def paso4a_cortes(pm_orig, pm, b, Xpm_orig, Xpm, Xb, nombre_b):
+def paso4a_cortes(pm, b, Xpm_orig, Xpm, Xb, nombre_b):
     """Cortes de PassMark por anio de prueba. Mismos CPUs de test para todos los sistemas."""
     y = pm["cpuMark"].values
     preds = {k: [] for k in ["A (actual)", "A' (nucleos reales)", "C(B)", "A' + pseudo-etiquetas"]}
@@ -400,7 +400,7 @@ def correr(info=None):
         mlflow.set_tag("modelo_b", nombre_b)
         print(f"  gana {nombre_b}", flush=True)
         print("[4a] sistema completo en los cortes de PassMark (MAE en cpuMark)", flush=True)
-        r4, w, tabla = paso4a_cortes(df, pm, b_ok, Xpm_orig, Xpm, Xb, nombre_b)
+        r4, w, tabla = paso4a_cortes(pm, b_ok, Xpm_orig, Xpm, Xb, nombre_b)
         for k, v in r4.items():
             print(f"  {k:<40} MAE {v['mae']:6.0f} | dentro 20% {v['kpi']:.1%}", flush=True)
         mlflow.log_metrics({re.sub(r"[^a-zA-Z0-9_]", "_", f"cortes_{k}")[:60]: v["mae"] for k, v in r4.items()})

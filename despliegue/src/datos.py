@@ -123,4 +123,6 @@ def preparar(df, extra=True, externos=False):
         for c in ["l3_mb", "proceso_nm", "base_ghz", "turbo_ghz", "hilos"]:
             d[c] = u[c].values
         columnas += ["l3_mb", "proceso_nm", "base_ghz", "turbo_ghz", "hilos"]
+    fuga = set(columnas) & set(config.COLUMNAS_LEAKAGE)       # proteccion: nunca entra algo calculado con la respuesta
+    assert not fuga, f"columnas con fuga de informacion en las entradas: {fuga}"
     return d[columnas], d

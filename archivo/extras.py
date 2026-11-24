@@ -12,7 +12,6 @@ Todo se mide igual que la busqueda: 5 cortes temporales (train <= corte, test = 
 Correr:  python -m archivo.extras            (todos)
          python -m archivo.extras x2 x3      (solo algunos)
 """
-import json
 import re
 import sys
 import time
@@ -57,7 +56,6 @@ def referencia():
 
 
 # ---------------------------------------------------------------- piezas
-NUM_NOMBRE = ["generacion", "gama"]
 GRUPOS = {   # para la ablacion (X6): que columnas se "apagan" en cada grupo
     "nucleos": ["cores", "hilos"],
     "anio": ["anio"],
@@ -83,7 +81,7 @@ def apagar(X, columnas):
     for c in columnas or []:
         if c not in X:
             continue
-        if c in modelos.CATEGORICAS or c in modelos.ALTA_CARDINALIDAD:
+        if c in modelos.CATEGORICAS:
             X[c] = "oculto"
         elif c in modelos.BANDERAS:
             X[c] = 0
@@ -148,7 +146,7 @@ class CatNativo(RegressorMixin, BaseEstimator):
 
     def _tabla(self, X):
         T = X.copy()
-        for c in modelos.CATEGORICAS + modelos.ALTA_CARDINALIDAD:
+        for c in modelos.CATEGORICAS:
             T[c] = T[c].astype(str)
         return T
 
@@ -158,7 +156,7 @@ class CatNativo(RegressorMixin, BaseEstimator):
         self.m_ = CatBoostRegressor(iterations=self.iterations, learning_rate=self.learning_rate, depth=self.depth,
                                     l2_leaf_reg=self.l2_leaf_reg, loss_function="MAE", random_seed=S, verbose=0,
                                     thread_count=1, allow_writing_files=False,
-                                    cat_features=modelos.CATEGORICAS + modelos.ALTA_CARDINALIDAD)
+                                    cat_features=modelos.CATEGORICAS)
         self.m_.fit(self._tabla(X), y, sample_weight=w)
         return self
 
@@ -231,15 +229,15 @@ def x1_boosting(X, y, df):
     v = {"regressor__vida_media": VIDAS, "regressor__externos": [True, False]}
     espacios = {
         "xgboost": (envuelto(xgb.XGBRegressor(n_jobs=1, random_state=S, tree_method="hist")),
-                    {**p("", {"n_estimators": [200, 400, 800], "learning_rate": loguniform(0.01, 0.3), "max_depth": randint(2, 9),
+                    {**p({"n_estimators": [200, 400, 800], "learning_rate": loguniform(0.01, 0.3), "max_depth": randint(2, 9),
                               "min_child_weight": loguniform(1, 50), "subsample": uniform(0.5, 0.5),
                               "colsample_bytree": uniform(0.4, 0.6), "reg_lambda": loguniform(1e-2, 30)}), **v}, 30),
         "lightgbm": (envuelto(lgb.LGBMRegressor(n_jobs=1, random_state=S, verbose=-1, subsample_freq=1)),
-                     {**p("", {"n_estimators": [200, 400, 800], "learning_rate": loguniform(0.01, 0.3), "num_leaves": randint(4, 64),
+                     {**p({"n_estimators": [200, 400, 800], "learning_rate": loguniform(0.01, 0.3), "num_leaves": randint(4, 64),
                                "min_child_samples": randint(5, 80), "subsample": uniform(0.5, 0.5),
                                "colsample_bytree": uniform(0.4, 0.6), "reg_lambda": loguniform(1e-2, 30)}), **v}, 30),
         "catboost": (envuelto(CatBoostRegressor(thread_count=1, random_seed=S, verbose=0, allow_writing_files=False)),
-                     {**p("", {"iterations": [300, 600, 1000], "learning_rate": loguniform(0.01, 0.3), "depth": randint(3, 9),
+                     {**p({"iterations": [300, 600, 1000], "learning_rate": loguniform(0.01, 0.3), "depth": randint(3, 9),
                                "l2_leaf_reg": loguniform(1, 30)}), **v}, 20),
     }
     cv = cortes_cv(X)

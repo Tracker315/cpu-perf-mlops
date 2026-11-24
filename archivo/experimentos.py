@@ -10,13 +10,13 @@ import mlflow
 import numpy as np
 import pandas as pd
 from sklearn.base import clone
-from sklearn.compose import ColumnTransformer, TransformedTargetRegressor
+from sklearn.compose import ColumnTransformer
 from sklearn.ensemble import HistGradientBoostingRegressor, RandomForestRegressor
 from sklearn.linear_model import Ridge
 from sklearn.model_selection import KFold
 from sklearn.neighbors import NearestNeighbors
 from sklearn.pipeline import make_pipeline
-from sklearn.preprocessing import FunctionTransformer, OneHotEncoder
+from sklearn.preprocessing import FunctionTransformer, OneHotEncoder, TargetEncoder
 from threadpoolctl import threadpool_limits
 
 from src import config, datos, modelos
@@ -115,20 +115,20 @@ def e2_variables(df, y):
     Xe, _ = datos.preparar(df, externos=True)
     base_num, base_cat = list(modelos.NUMERICAS), list(modelos.CATEGORICAS)
     grupos = [
-        ("solo cores (Actividad 3)", ["cores"], [], [], False),
-        ("specs de hoja de datos", ["cores", "TDP", "anio", "ghz_nombre"], ["fabricante", "familia"], ["socket"], False),
-        ("+ generacion/gama/sufijo del nombre", ["cores", "TDP", "anio", "ghz_nombre", "generacion", "gama"], ["fabricante", "familia", "sufijo"], ["socket"], False),
-        ("+ externos (cache, nm, GHz, hilos)", ["cores", "TDP", "anio", "ghz_nombre", "generacion", "gama"] + modelos.EXTERNAS, ["fabricante", "familia", "sufijo"], ["socket"], True),
+        ("solo cores (Actividad 3)", ["cores"], []),
+        ("specs de hoja de datos", ["cores", "TDP", "anio", "ghz_nombre"], ["fabricante", "familia", "socket"]),
+        ("+ generacion/gama/sufijo del nombre", ["cores", "TDP", "anio", "ghz_nombre", "generacion", "gama"], ["fabricante", "familia", "sufijo", "socket"]),
+        ("+ externos (cache, nm, GHz, hilos)", ["cores", "TDP", "anio", "ghz_nombre", "generacion", "gama"] + modelos.EXTERNAS, ["fabricante", "familia", "sufijo", "socket"]),
     ]
-    for etiqueta, num, cat, alta, _ in grupos:
+    for etiqueta, num, cat in grupos:
         if etiqueta.startswith("solo"):      # como en la Actividad 3: una sola variable
             m = modelos.con_log(make_pipeline(ColumnTransformer([("cores", FunctionTransformer(np.log1p), ["cores"])]),
                                               RandomForestRegressor(n_estimators=200, random_state=config.SEMILLA, n_jobs=-1)))
         else:
-            modelos.NUMERICAS, modelos.CATEGORICAS, modelos.ALTA_CARDINALIDAD = num, cat, alta
+            modelos.NUMERICAS, modelos.CATEGORICAS = num, cat
             m = rf()
         filas.append(registrar("E2_variables", etiqueta, metricas(y, cv_pred(m, Xe, y)), params={"n_numericas": len(num)}))
-    modelos.NUMERICAS, modelos.CATEGORICAS, modelos.ALTA_CARDINALIDAD = base_num, base_cat, ["socket"]
+    modelos.NUMERICAS, modelos.CATEGORICAS = base_num, base_cat
     return filas
 
 
@@ -137,13 +137,13 @@ def e3_socket(X, y):
     filas = []
     original = modelos.preprocesamiento
     for etiqueta in ["target encoding", "one-hot", "sin socket"]:
-        def prep(polinomio=0, et=etiqueta):
-            ct = original(polinomio)
-            pasos = [t for t in ct.transformers if t[0] != "socket"]
+        def prep(externos=None, et=etiqueta):
+            ct = original(externos)
+            pasos = [(n, t, [c for c in cols if c != "socket"]) if n == "cat" else (n, t, cols) for n, t, cols in ct.transformers]
             if et == "one-hot":
                 pasos.append(("socket", OneHotEncoder(handle_unknown="ignore", min_frequency=10), ["socket"]))
-            elif et == "target encoding":
-                pasos = ct.transformers
+            elif et == "target encoding":            # explicito: produccion ya usa one-hot para el socket
+                pasos.append(("socket", TargetEncoder(random_state=config.SEMILLA), ["socket"]))
             ct.transformers = pasos
             return ct
         modelos.preprocesamiento = prep

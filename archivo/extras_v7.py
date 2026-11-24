@@ -3,7 +3,6 @@ traducidos (pseudo-etiquetas). Misma evaluacion que cruzado.paso4a (5 cortes) y 
 import json
 
 import mlflow
-import numpy as np
 from sklearn.base import clone
 from threadpoolctl import threadpool_limits
 
@@ -49,7 +48,7 @@ def correr():
         for nombre, hacer in BASES.items():
             cruzado.modelo_base = hacer
             print(f"== base A: {nombre}", flush=True)
-            r4, w, tabla = cruzado.paso4a_cortes(df, pm, b_ok, Xpm_orig, Xpm, Xb, nombre_b)
+            r4, w, tabla = cruzado.paso4a_cortes(pm, b_ok, Xpm_orig, Xpm, Xb, nombre_b)
             r5 = cruzado.paso4b_futuro(pm, b_ok, Xpm, Xb, nombre_b, w)
             m = {"mae": r4["A' + pseudo-etiquetas"]["mae"], "kpi_dentro_20pct": r4["A' + pseudo-etiquetas"]["kpi"],
                  "mae_sin_pseudo": r4["A' (nucleos reales)"]["mae"],

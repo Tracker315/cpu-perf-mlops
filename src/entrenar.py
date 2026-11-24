@@ -61,7 +61,7 @@ def entrenar(X, y, info_datos, objetivo=config.OBJETIVO, experimento=config.EXP_
                   **{k: str(v) for k, v in info_datos.items() if k.startswith(("version_", "cobertura"))}}
     filas = []
     nombre_padre = f"entrenamiento__data-v{info_datos['version']}__{datetime.now():%Y%m%d-%H%M}"
-    with mlflow.start_run(run_name=nombre_padre, tags={**tags_datos, "etapa": "entrenamiento"}) as padre:
+    with mlflow.start_run(run_name=nombre_padre, tags={**tags_datos, "etapa": "entrenamiento"}):
         for nombre, (familia, modelo, rejilla) in modelos.catalogo().items():
             if solo and nombre not in solo:
                 continue

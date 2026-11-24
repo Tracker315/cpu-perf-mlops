@@ -39,8 +39,8 @@ def con_extra(columnas, fn):
     preprocesamiento. Solo lo usa este experimento: reemplaza modelos.preprocesamiento mientras corre fn()."""
     original = modelos.preprocesamiento
 
-    def con_columnas(polinomio=0, externos=None):
-        ct = original(polinomio, externos)
+    def con_columnas(externos=None):
+        ct = original(externos)
         nombre, pasos, cols = ct.transformers[0]                  # ("num", pipeline numerico, columnas)
         ct.transformers[0] = (nombre, pasos, list(cols) + [c for c in columnas if c not in cols])
         return ct
